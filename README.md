@@ -4,7 +4,6 @@ CSharpLanguageManager
 CSharpLanguageManager is an assembly/ library to build multilingual programms in .Net.
 The assembly was written and tested in .Net 4.6.2.
 
-
 ## Basic usage:
 If you just have one language loaded, you don't need to set the current language as
 the language manager uses the only language as default.
@@ -28,7 +27,7 @@ public void Test()
 
 ## Subscription to OnLanguageChanged:
 You can "subscribe" to the EventHandler OnLanguageChanged to update your GUI whenever the language is changed.
-This can be done like the following: (For more information see the example project)
+This can be done like the following: (For more information see [the example project](https://github.com/SeppPenner/CSharpLanguageManager/tree/master/ExampleProject))
 
 ```csharp
 using System;
@@ -91,7 +90,8 @@ All language files need to be included into the "languages" folder in your appli
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <Language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <Identifier>de-DE</Identifier> <!--According to https://msdn.microsoft.com/de-de/library/ee825488(v=cs.20).aspx-->
+    <!--According to https://msdn.microsoft.com/de-de/library/ee825488(v=cs.20).aspx-->
+    <Identifier>de-DE</Identifier> 
 	<Name>German<Name>
 	<Words>
 		<Word>
@@ -102,7 +102,7 @@ All language files need to be included into the "languages" folder in your appli
 </Language>
 ```
 
-An example project can be found here.
+An example project can be found [here](https://github.com/SeppPenner/CSharpLanguageManager/tree/master/ExampleProject).
 
 Change history
 --------------
