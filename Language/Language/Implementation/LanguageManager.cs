@@ -41,10 +41,8 @@ namespace Languages.Implementation
         {
             _currentLanguage = _languages.First(x => x.GetIdentifier().Equals(identifier));
             if (_currentLanguage == null)
-            {
                 throw new LanguageNotLoadedException("The language " + identifier + " is not loaded properly",
                     new Exception("The language " + identifier + " is not loaded properly"));
-            }
             LanguageHasChanged();
         }
 
@@ -64,9 +62,7 @@ namespace Languages.Implementation
             _languages = _importExport.LoadDefaults();
             CheckSingleLanguage();
             if (_importExport.GetExceptions().Count > 0)
-            {
                 throw new LanguageInitializationException(_importExport.GetExceptions().ToString());
-            }
         }
 
         private void CheckSingleLanguage()

@@ -24,9 +24,7 @@ namespace Languages.Implementation
             var languages = new List<Language>();
             foreach (var file in Directory.EnumerateFiles(Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
                 "languages")))
-            {
                 TryLoadLanguage(languages, file);
-            }
             return languages;
         }
 
@@ -35,14 +33,12 @@ namespace Languages.Implementation
             return Exceptions;
         }
 
-        public List<Language> Load(List<string> filenames)
+        public List<Language> Load(IEnumerable<string> filenames)
         {
             ClearExceptions();
             var languages = new List<Language>();
             foreach (var file in filenames)
-            {
                 TryLoadLanguage(languages, file);
-            }
             return languages;
         }
 
@@ -68,9 +64,7 @@ namespace Languages.Implementation
         private void SaveException(Exception ex)
         {
             if (Exceptions == null)
-            {
                 Exceptions = new List<Exception>();
-            }
             Exceptions.Add(ex);
         }
 

@@ -4,6 +4,8 @@ CSharpLanguageManager
 CSharpLanguageManager is an assembly/ library to build multilingual programms in .Net.
 The assembly was written and tested in .Net 4.6.2.
 
+[![Build status](https://ci.appveyor.com/api/projects/status/v19epph90d3dgs1k?svg=true)](https://ci.appveyor.com/project/SeppPenner/csharplanguagemanager)
+
 ## Basic usage:
 If you just have one language loaded, you don't need to set the current language as
 the language manager uses the only language as default.
@@ -107,5 +109,6 @@ An example project can be found [here](https://github.com/SeppPenner/CSharpLangu
 Change history
 --------------
 
+* **Version 1.0.0.2 (2017-02-17)** : Code review.
 * **Version 1.0.0.1 (2016-12-06)** : Added EventHandler to subscribe to Event.
 * **Version 1.0.0.0 (2016-12-06)** : 1.0 release.
