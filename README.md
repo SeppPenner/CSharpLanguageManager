@@ -42,6 +42,7 @@ namespace TestLanguage
     public partial class Main : Form
     {
         private readonly ILanguageManager _lm = new LanguageManager();
+        private Language _lang;
 
         public Main()
         {
@@ -59,9 +60,7 @@ namespace TestLanguage
         private void LoadLanguagesToCombo()
         {
             foreach (var lang in _lm.GetLanguages())
-            {
                 comboBoxLanguage.Items.Add(lang.Name);
-            }
             comboBoxLanguage.SelectedIndex = 0;
         }
 
@@ -80,7 +79,8 @@ namespace TestLanguage
 
         private void OnLanguageChanged(object sender, EventArgs eventArgs)
         {
-            labelSelectLanguage.Text = _lm.GetCurrentLanguage().GetWord("SelectLanguage");
+            _lang = _lm.GetCurrentLanguage();
+            labelSelectLanguage.Text = _lang.GetWord("SelectLanguage");
         }
     }
 }

@@ -1,0 +1,10 @@
+E:\TODO\Fertig\Net\Language\ExampleProject\TestLanguage\bin\Debug\TestLanguage.exe.config
+E:\TODO\Fertig\Net\Language\ExampleProject\TestLanguage\bin\Debug\TestLanguage.exe
+E:\TODO\Fertig\Net\Language\ExampleProject\TestLanguage\bin\Debug\TestLanguage.pdb
+E:\TODO\Fertig\Net\Language\ExampleProject\TestLanguage\bin\Debug\Languages.pdb
+E:\TODO\Fertig\Net\Language\ExampleProject\TestLanguage\obj\Debug\TestLanguage.csprojResolveAssemblyReference.cache
+E:\TODO\Fertig\Net\Language\ExampleProject\TestLanguage\obj\Debug\TestLanguage.Main.resources
+E:\TODO\Fertig\Net\Language\ExampleProject\TestLanguage\obj\Debug\TestLanguage.Properties.Resources.resources
+E:\TODO\Fertig\Net\Language\ExampleProject\TestLanguage\obj\Debug\TestLanguage.csproj.GenerateResource.Cache
+E:\TODO\Fertig\Net\Language\ExampleProject\TestLanguage\obj\Debug\TestLanguage.exe
+E:\TODO\Fertig\Net\Language\ExampleProject\TestLanguage\obj\Debug\TestLanguage.pdb
