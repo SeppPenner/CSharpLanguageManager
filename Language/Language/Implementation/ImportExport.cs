@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 using Languages.Exceptions;
@@ -22,8 +23,11 @@ namespace Languages.Implementation
         {
             ClearExceptions();
             var languages = new List<Language>();
-            foreach (var file in Directory.EnumerateFiles(Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
-                "languages")))
+            var location = Assembly.GetExecutingAssembly().Location;
+            CheckLocationIsNull(location);
+            // ReSharper disable once AssignNullToNotNullAttribute
+            var languageFolder = Path.Combine(Directory.GetParent(location).FullName, "languages");
+            foreach (var file in Directory.EnumerateFiles(languageFolder))
                 TryLoadLanguage(languages, file);
             return languages;
         }
@@ -40,6 +44,12 @@ namespace Languages.Implementation
             foreach (var file in filenames)
                 TryLoadLanguage(languages, file);
             return languages;
+        }
+
+        private void CheckLocationIsNull(string location)
+        {
+            if (location == null)
+                throw new ArgumentNullException(nameof(location));
         }
 
         private void TryLoadLanguage(List<Language> languages, string file)
