@@ -12,8 +12,6 @@ namespace Languages.Interfaces
 
         string GetWord(string key);
 
-        string GetIdentifier();
-
         CultureInfo GetCulture();
     }
 }

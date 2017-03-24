@@ -39,11 +39,24 @@ namespace Languages.Implementation
 
         public void SetCurrentLanguage(string identifier)
         {
-            _currentLanguage = _languages.First(x => x.GetIdentifier().Equals(identifier));
+            _currentLanguage = _languages.First(x => x.Identifier.Equals(identifier));
             if (_currentLanguage == null)
-                throw new LanguageNotLoadedException("The language " + identifier + " is not loaded properly",
-                    new Exception("The language " + identifier + " is not loaded properly"));
+                ThrowLanguageNotProperlyLoadedException(identifier);
             LanguageHasChanged();
+        }
+
+        public void SetCurrentLanguageFromName(string name)
+        {
+            _currentLanguage = _languages.First(x => x.Name.Equals(name));
+            if (_currentLanguage == null)
+                ThrowLanguageNotProperlyLoadedException(name);
+            LanguageHasChanged();
+        }
+
+        private void ThrowLanguageNotProperlyLoadedException(string language)
+        {
+            throw new LanguageNotLoadedException("The language " + language + " is not loaded properly",
+                new Exception("The language " + language + " is not loaded properly"));
         }
 
         protected virtual void LanguageChanged(EventArgs e)

@@ -19,11 +19,6 @@ namespace Languages.Implementation
             return Words.Find(x => x.Key.Equals(key)).Value;
         }
 
-        public string GetIdentifier()
-        {
-            return Identifier;
-        }
-
         public CultureInfo GetCulture()
         {
             return new CultureInfo(Identifier);

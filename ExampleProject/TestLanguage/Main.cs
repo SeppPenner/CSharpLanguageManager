@@ -32,15 +32,7 @@ namespace TestLanguage
 
         private void comboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (comboBoxLanguage.SelectedItem.ToString())
-            {
-                case "German":
-                    _lm.SetCurrentLanguage("de-DE");
-                    break;
-                case "English (US)":
-                    _lm.SetCurrentLanguage("en-US");
-                    break;
-            }
+            _lm.SetCurrentLanguageFromName(comboBoxLanguage.SelectedItem.ToString());
         }
 
         private void OnLanguageChanged(object sender, EventArgs eventArgs)
