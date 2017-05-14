@@ -6,3 +6,12 @@ E:\TODO\Fertig\Net\Language\ExampleProject\TestLanguage\obj\Debug\TestLanguage.P
 E:\TODO\Fertig\Net\Language\ExampleProject\TestLanguage\obj\Debug\TestLanguage.csproj.GenerateResource.Cache
 E:\TODO\Fertig\Net\Language\ExampleProject\TestLanguage\obj\Debug\TestLanguage.exe
 E:\TODO\Fertig\Net\Language\ExampleProject\TestLanguage\obj\Debug\TestLanguage.pdb
+C:\Users\tim\Desktop\CSharpLanguageManager\ExampleProject\TestLanguage\bin\Debug\TestLanguage.exe.config
+C:\Users\tim\Desktop\CSharpLanguageManager\ExampleProject\TestLanguage\bin\Debug\TestLanguage.exe
+C:\Users\tim\Desktop\CSharpLanguageManager\ExampleProject\TestLanguage\bin\Debug\TestLanguage.pdb
+C:\Users\tim\Desktop\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.csprojResolveAssemblyReference.cache
+C:\Users\tim\Desktop\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.Main.resources
+C:\Users\tim\Desktop\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.Properties.Resources.resources
+C:\Users\tim\Desktop\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.csproj.GenerateResource.Cache
+C:\Users\tim\Desktop\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.exe
+C:\Users\tim\Desktop\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.pdb

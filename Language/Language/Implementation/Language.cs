@@ -5,20 +5,38 @@ using Languages.Interfaces;
 
 namespace Languages.Implementation
 {
+    /// <summary>
+    ///     <inheritdoc />
+    /// </summary>
     [Serializable]
     public class Language : ILanguage
     {
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
         public string Name { get; set; }
-        public string Identifier { get; set; }
-        //According to https://msdn.microsoft.com/de-de/library/ee825488(v=cs.20).aspx
 
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
+        public string Identifier { get; set; }
+
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
         public List<Word> Words { get; set; }
 
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
         public string GetWord(string key)
         {
             return Words.Find(x => x.Key.Equals(key)).Value;
         }
 
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
         public CultureInfo GetCulture()
         {
             return new CultureInfo(Identifier);

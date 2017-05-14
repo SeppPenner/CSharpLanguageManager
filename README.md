@@ -159,6 +159,7 @@ An example project can be found [here](https://github.com/SeppPenner/CSharpLangu
 Change history
 --------------
 
+* **Version 1.0.0.5 (2017-05-14)** : Added documentation.
 * **Version 1.0.0.4 (2017-03-24)** : Again simplified the usage of languages.
 * **Version 1.0.0.3 (2017-03-21)** : Simplified the usage of languages.
 * **Version 1.0.0.2 (2017-02-17)** : Code review.

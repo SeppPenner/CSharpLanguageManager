@@ -9,16 +9,28 @@ using Languages.Interfaces;
 
 namespace Languages.Implementation
 {
+    /// <summary>
+    ///     <inheritdoc />
+    /// </summary>
     public class ImportExport : IImportExport
     {
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
         public List<Exception> Exceptions { get; private set; }
 
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
         public Language Load(string filename)
         {
             var xDocument = XDocument.Load(filename);
             return CreateObjectsFromString<Language>(xDocument);
         }
 
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
         public List<Language> LoadDefaults()
         {
             ClearExceptions();
@@ -32,11 +44,17 @@ namespace Languages.Implementation
             return languages;
         }
 
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
         public List<Exception> GetExceptions()
         {
             return Exceptions;
         }
 
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
         public List<Language> Load(IEnumerable<string> filenames)
         {
             ClearExceptions();
