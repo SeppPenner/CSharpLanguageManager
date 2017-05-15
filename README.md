@@ -23,7 +23,7 @@ public void Test()
 {
 	ILanguageManager _lm = new LanguageManager();
 	_lm.SetCurrentLanguage("de-DE"); //Version 1.0.0.0 to Version 1.0.0.3
-	_lm.SetCurrentLanguageFromName("German"); //Version 1.0.0.4
+	_lm.SetCurrentLanguageFromName("German"); //Version 1.0.0.4 and above
 	var test = _lm.GetCurrentLanguage().GetWord("YourKey");
 }
 ```
