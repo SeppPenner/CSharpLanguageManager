@@ -28,7 +28,7 @@ public void Test()
 }
 ```
 
-## Subscription to OnLanguageChanged Version 1.0.0.4:
+## Subscription to OnLanguageChanged Version 1.0.0.4 and above:
 You can "subscribe" to the EventHandler OnLanguageChanged to update your GUI whenever the language is changed.
 This can be done like the following: (For more information see [the example project](https://github.com/SeppPenner/CSharpLanguageManager/tree/master/ExampleProject))
 ```csharp
