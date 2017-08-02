@@ -19,7 +19,7 @@ namespace Languages.Interfaces
         string Identifier { get; set; }
 
         /// <summary>
-        /// The name of the <see cref="Language" />
+        ///     The name of the <see cref="Language" />
         /// </summary>
         // ReSharper disable once UnusedMemberInSuper.Global
         // ReSharper disable once UnusedMember.Global
