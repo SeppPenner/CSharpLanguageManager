@@ -14,6 +14,7 @@ namespace Languages.Interfaces
         /// </summary>
         /// <param name="filename">The <see cref="Language" /> file name that should be loaded</param>
         /// <returns>The corresponding <see cref="Language" /> class</returns>
+        // ReSharper disable once UnusedMemberInSuper.Global
         Language Load(string filename);
 
         /// <summary>
@@ -21,6 +22,7 @@ namespace Languages.Interfaces
         /// </summary>
         /// <param name="filenames">The <see cref="Language" /> file names that should be loaded</param>
         /// <returns>The corresponding <see cref="Language" />s <see cref="List{T}" /></returns>
+        // ReSharper disable once UnusedMember.Global
         List<Language> Load(IEnumerable<string> filenames);
 
         /// <summary>

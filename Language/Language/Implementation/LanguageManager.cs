@@ -10,6 +10,7 @@ namespace Languages.Implementation
     /// <summary>
     ///     <inheritdoc />
     /// </summary>
+    // ReSharper disable once UnusedMember.Global
     public class LanguageManager : ILanguageManager
     {
         private readonly IImportExport _importExport = new ImportExport();
@@ -31,15 +32,20 @@ namespace Languages.Implementation
         /// <summary>
         ///     <inheritdoc />
         /// </summary>
-        public List<Language> GetLanguages()
+        public List<ILanguage> GetLanguages()
         {
-            return _languages;
+            return ConvertToListIlanguage(_languages);
+        }
+
+        private static List<ILanguage> ConvertToListIlanguage(IEnumerable<Language> languages)
+        {
+            return languages.Cast<ILanguage>().ToList();
         }
 
         /// <summary>
         ///     <inheritdoc />
         /// </summary>
-        public Language GetCurrentLanguage()
+        public ILanguage GetCurrentLanguage()
         {
             return _currentLanguage;
         }
@@ -74,7 +80,7 @@ namespace Languages.Implementation
             LanguageHasChanged();
         }
 
-        private void ThrowLanguageNotProperlyLoadedException(string language)
+        private static void ThrowLanguageNotProperlyLoadedException(string language)
         {
             throw new LanguageNotLoadedException("The language " + language + " is not loaded properly",
                 new Exception("The language " + language + " is not loaded properly"));
