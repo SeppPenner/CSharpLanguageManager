@@ -9,7 +9,6 @@ The assembly was written and tested in .Net 4.6.2.
 [![GitHub forks](https://img.shields.io/github/forks/SeppPenner/CSharpLanguageManager.svg)](https://github.com/SeppPenner/CSharpLanguageManager/network)
 [![GitHub stars](https://img.shields.io/github/stars/SeppPenner/CSharpLanguageManager.svg)](https://github.com/SeppPenner/CSharpLanguageManager/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/CSharpLanguageManager/master/License.txt)
-[![NuGet](https://img.shields.io/nuget/dt/HaemmerElectronics.SeppPenner.Language.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/1.0.0.5)
 
 ## Basic usage:
 If you just have one language loaded, you don't need to set the current language as
@@ -160,6 +159,7 @@ All language files need to be included into the "languages" folder in your appli
 ```
 
 An example project can be found [here](https://github.com/SeppPenner/CSharpLanguageManager/tree/master/ExampleProject).
+The project can be found on [nuget](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/1.0.0.5).
 
 Change history
 --------------
