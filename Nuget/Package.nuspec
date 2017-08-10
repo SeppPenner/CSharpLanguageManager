@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>HaemmerElectronics.SeppPenner.Language</id>
+    <version>1.0.0.5</version>
+    <authors>SeppPenner</authors>
+    <owners>SeppPenner</owners>
+    <licenseUrl>https://github.com/SeppPenner/CSharpLanguageManager/blob/master/License.txt</licenseUrl>
+    <projectUrl>https://github.com/SeppPenner/CSharpLanguageManager</projectUrl>
+    <iconUrl>https://drive.google.com/open?id=0B7FLEm_FBeJFZFZGYlhmU3oxMTg</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>
+		CSharpLanguageManager is an assembly/ library to build multilingual programms in .Net.
+		The assembly was written and tested in .Net 4.6.2.
+	</description>
+    <releaseNotes>
+		Version 1.0.0.5 (2017-05-14) : Added documentation.
+		Version 1.0.0.4 (2017-03-24) : Again simplified the usage of languages.
+		Version 1.0.0.3 (2017-03-21) : Simplified the usage of languages.
+		Version 1.0.0.2 (2017-02-17) : Code review.
+		Version 1.0.0.1 (2016-12-06) : Added EventHandler to subscribe to Event.
+		Version 1.0.0.0 (2016-12-06) : 1.0 release.
+	</releaseNotes>
+    <copyright>Copyright © Hämmer Electronics 2017</copyright>
+    <tags>c# language csharp multilingual</tags>
+  </metadata>
+  <files>
+		<file src="README.md" target="lib/" />
+		<file src="License.txt" target="lib/" />
+		<file src="Languages.dll" target="lib/" />
+		<file src="Languages.pdb" target="lib/" />
+		<file src="languages/*.*" target="lib/languages/" />
+    </files>
+</package>
