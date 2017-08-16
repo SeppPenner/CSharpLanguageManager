@@ -7,5 +7,9 @@
 			<Key>SelectLanguage</Key>
 			<Value>Select language:</Value>
 		</Word>
+		<Word>
+			<Key>ButtonTitle</Key>
+			<Value>Reload languages</Value>
+		</Word>
 	</Words>
 </Language>

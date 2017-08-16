@@ -61,7 +61,7 @@
             this.buttonReloadLanguageFiles.TabIndex = 3;
             this.buttonReloadLanguageFiles.Text = "Reload language files";
             this.buttonReloadLanguageFiles.UseVisualStyleBackColor = true;
-            this.buttonReloadLanguageFiles.Click += new System.EventHandler(this.buttonReloadLanguageFiles_Click);
+            this.buttonReloadLanguageFiles.Click += new System.EventHandler(this.ButtonReloadLanguageFiles_Click);
             // 
             // Main
             // 

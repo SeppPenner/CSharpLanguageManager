@@ -7,5 +7,9 @@
 			<Key>SelectLanguage</Key>
 			<Value>Sprache auswählen:</Value>
 		</Word>
+		<Word>
+			<Key>ButtonTitle</Key>
+			<Value>Sprachen neu laden</Value>
+		</Word>
 	</Words>
 </Language>

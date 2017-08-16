@@ -15,13 +15,11 @@ C:\Users\tim\Desktop\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug
 C:\Users\tim\Desktop\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.csproj.GenerateResource.Cache
 C:\Users\tim\Desktop\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.exe
 C:\Users\tim\Desktop\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.pdb
-F:\TODO\CSharpLanguageManager\ExampleProject\TestLanguage\bin\Debug\TestLanguage.exe.config
-F:\TODO\CSharpLanguageManager\ExampleProject\TestLanguage\bin\Debug\TestLanguage.exe
-F:\TODO\CSharpLanguageManager\ExampleProject\TestLanguage\bin\Debug\TestLanguage.pdb
-F:\TODO\CSharpLanguageManager\ExampleProject\TestLanguage\bin\Debug\Languages.pdb
-F:\TODO\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.csprojResolveAssemblyReference.cache
 F:\TODO\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.Main.resources
 F:\TODO\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.Properties.Resources.resources
 F:\TODO\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.csproj.GenerateResource.Cache
+F:\TODO\CSharpLanguageManager\ExampleProject\TestLanguage\bin\Debug\TestLanguage.exe.config
+F:\TODO\CSharpLanguageManager\ExampleProject\TestLanguage\bin\Debug\TestLanguage.exe
+F:\TODO\CSharpLanguageManager\ExampleProject\TestLanguage\bin\Debug\TestLanguage.pdb
 F:\TODO\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.exe
 F:\TODO\CSharpLanguageManager\ExampleProject\TestLanguage\obj\Debug\TestLanguage.pdb

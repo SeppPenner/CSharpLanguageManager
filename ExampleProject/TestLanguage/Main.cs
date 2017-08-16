@@ -39,11 +39,12 @@ namespace TestLanguage
         {
             _lang = _lm.GetCurrentLanguage();
             labelSelectLanguage.Text = _lang.GetWord("SelectLanguage");
+            buttonReloadLanguageFiles.Text = _lang.GetWord("ButtonTitle");
         }
 
-        private void buttonReloadLanguageFiles_Click(object sender, EventArgs e)
+        private void ButtonReloadLanguageFiles_Click(object sender, EventArgs e)
         {
-            _lm.
+            _lm.ReloadLanguages();
         }
     }
 }
