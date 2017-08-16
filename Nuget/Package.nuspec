@@ -28,8 +28,6 @@
   <files>
 		<file src="README.md" target="lib\" />
 		<file src="License.txt" target="lib\" />
-		<file src="Languages.dll" target="lib\" />
-		<file src="Languages.pdb" target="lib\" />
 		<file src="languages\**" target="lib\languages" />
 		<file src="Documentation\**" target="lib\Documentation" />
 		<file src=".Net 4.5\**" target="lib\.Net 4.5" />
