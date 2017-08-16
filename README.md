@@ -165,6 +165,7 @@ The project can be found on [nuget](https://www.nuget.org/packages/HaemmerElectr
 Change history
 --------------
 
+* **Version 1.0.0.6 (2017-08-16)** : Added ReloadLanguages() method to ILanguageManager.
 * **Version 1.0.0.5 (2017-05-14)** : Added documentation.
 * **Version 1.0.0.4 (2017-03-24)** : Again simplified the usage of languages.
 * **Version 1.0.0.3 (2017-03-21)** : Simplified the usage of languages.
