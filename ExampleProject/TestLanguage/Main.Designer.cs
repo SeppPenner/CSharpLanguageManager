@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
             this.labelSelectLanguage = new System.Windows.Forms.Label();
+            this.buttonReloadLanguageFiles = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBoxLanguage
@@ -52,11 +53,22 @@
             this.labelSelectLanguage.TabIndex = 2;
             this.labelSelectLanguage.Text = "Choose Language:";
             // 
+            // buttonReloadLanguageFiles
+            // 
+            this.buttonReloadLanguageFiles.Location = new System.Drawing.Point(165, 53);
+            this.buttonReloadLanguageFiles.Name = "buttonReloadLanguageFiles";
+            this.buttonReloadLanguageFiles.Size = new System.Drawing.Size(139, 23);
+            this.buttonReloadLanguageFiles.TabIndex = 3;
+            this.buttonReloadLanguageFiles.Text = "Reload language files";
+            this.buttonReloadLanguageFiles.UseVisualStyleBackColor = true;
+            this.buttonReloadLanguageFiles.Click += new System.EventHandler(this.buttonReloadLanguageFiles_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 52);
+            this.ClientSize = new System.Drawing.Size(324, 101);
+            this.Controls.Add(this.buttonReloadLanguageFiles);
             this.Controls.Add(this.labelSelectLanguage);
             this.Controls.Add(this.comboBoxLanguage);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -70,6 +82,7 @@
         #endregion
         private System.Windows.Forms.ComboBox comboBoxLanguage;
         private System.Windows.Forms.Label labelSelectLanguage;
+        private System.Windows.Forms.Button buttonReloadLanguageFiles;
     }
 }
 

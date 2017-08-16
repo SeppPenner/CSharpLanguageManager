@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.5.15.0" projectFile="F:\TODO\CSharpLanguageManager\Language\Documentation\Helpfile.shfbproj" started="16.08.2017 19:04:44">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.5.15.0" projectFile="F:\TODO\CSharpLanguageManager\Language\Documentation\Helpfile.shfbproj" started="16.08.2017 19:21:20">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\Sandcastle Help File Builder\&#39;
@@ -15,6 +15,9 @@ Loading and initializing plug-ins...
 Lightweight Website Style Version 2017.5.15.0
 Copyright &#169; 2006-2017, Eric Woodruff, All Rights Reserved
 Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
+</buildStep>
+<buildStep step="ClearWorkFolder">
+Clearing working folder...
 -------------------------------
 Clearing any prior web/markdown output...
 </buildStep>
@@ -33,7 +36,7 @@ SHFB: Warning BE0062: No documentation source XML comments files found.  The hel
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, Englisch (USA))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00,0156
+</plugIn>    Last step completed in 00:00:00,0313
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
@@ -42,7 +45,7 @@ Generating API filter for MRefBuilder...
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Program Files (x86)\MSBuild\14.0\bin\amd64\MSBuild.exe - GenerateRefInfo.proj]
-Der Buildvorgang wurde am 16.08.2017 19:04:45 gestartet.
+Der Buildvorgang wurde am 16.08.2017 19:21:21 gestartet.
 Das in einem BeforeTargets-Attribut bei &quot;C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)&quot; aufgefhrte Ziel &quot;BeforeGenerateProjectPriFile&quot; ist nicht im Projekt vorhanden und wird daher ignoriert.
 Das in einem BeforeTargets-Attribut bei &quot;C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,37)&quot; aufgefhrte Ziel &quot;_ConvertPdbFiles&quot; ist nicht im Projekt vorhanden und wird daher ignoriert.
 Das in einem AfterTargets-Attribut bei &quot;C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,70)&quot; aufgefhrte Ziel &quot;_CollectPdbFiles&quot; ist nicht im Projekt vorhanden und wird daher ignoriert.
@@ -57,7 +60,7 @@ GenerateRefInfo:
   Portions Copyright &#184; 2006-2016, Eric Woodruff, All Rights Reserved.
   No source code context base path specified.  Source context information is unavailable.
   Loaded 1 assemblies for reflection and 1 dependency assemblies.
-  Wrote information on 4 namespaces, 12 types, and 51 members
+  Wrote information on 4 namespaces, 12 types, and 53 members
   Die Datei wird von &quot;reflection.org&quot; in &quot;reflection.all&quot; kopiert.
   XslTransform (v2017.5.15.0)
   Copyright &#184; 2006-2017, Microsoft Corporation, All Rights Reserved.
@@ -67,13 +70,13 @@ Die Erstellung von Projekt &quot;F:\TODO\CSharpLanguageManager\Language\Document
 
 Der Buildvorgang wurde erfolgreich ausgefhrt.
 
-Verstrichene Zeit 00:00:01.68
-    Last step completed in 00:00:02,1562
+Verstrichene Zeit 00:00:02.06
+    Last step completed in 00:00:02,6406
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Program Files (x86)\MSBuild\14.0\bin\amd64\MSBuild.exe - TransformManifest.proj]
-Der Buildvorgang wurde am 16.08.2017 19:04:47 gestartet.
+Der Buildvorgang wurde am 16.08.2017 19:21:24 gestartet.
 Projekt &quot;F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\TransformManifest.proj&quot; auf Knoten &quot;1&quot; (Standardziele).
 TransformManifest:
   XslTransform (v2017.5.15.0)
@@ -93,8 +96,8 @@ Die Erstellung von Projekt &quot;F:\TODO\CSharpLanguageManager\Language\Document
 
 Der Buildvorgang wurde erfolgreich ausgefhrt.
 
-Verstrichene Zeit 00:00:01.10
-    Last step completed in 00:00:01,5313
+Verstrichene Zeit 00:00:01.23
+    Last step completed in 00:00:01,7187
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
@@ -112,7 +115,7 @@ Merging conceptual and additional tables of contents...
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Program Files (x86)\MSBuild\14.0\bin\amd64\MSBuild.exe - GenerateIntermediateTOC.proj]
-Der Buildvorgang wurde am 16.08.2017 19:04:48 gestartet.
+Der Buildvorgang wurde am 16.08.2017 19:21:26 gestartet.
 Projekt &quot;F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\GenerateIntermediateTOC.proj&quot; auf Knoten &quot;1&quot; (Standardziele).
 GenerateIntermediateTOC:
   XslTransform (v2017.5.15.0)
@@ -125,24 +128,24 @@ Der Buildvorgang wurde erfolgreich ausgefhrt.
 
 Verstrichene Zeit 00:00:00.67
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:01,1406
+    Last step completed in 00:00:01,2969
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00,3281
+    Last step completed in 00:00:00,5938
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\sandcastle.config
   Updating reference topic configurations.
   No conceptual content.  Removing conceptual content components.
-    Last step completed in 00:00:00,0156
+    Last step completed in 00:00:00,0312
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Program Files (x86)\MSBuild\14.0\bin\amd64\MSBuild.exe - BuildTopics.proj]
-Der Buildvorgang wurde am 16.08.2017 19:04:50 gestartet.
+Der Buildvorgang wurde am 16.08.2017 19:21:28 gestartet.
 Projekt &quot;F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj&quot; auf Knoten &quot;1&quot; (Standardziele).
 BuildTopics:
   BuildAssembler (v2017.5.15.0)
@@ -241,6 +244,8 @@ BuildAssembler : warning : ShowMissingComponent: [M:Languages.Implementation.Lan
 BuildAssembler : warning : ShowMissingComponent: [M:Languages.Implementation.LanguageManager.LanguageChanged(System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [E:Languages.Implementation.LanguageManager.OnLanguageChanged] Missing &lt;summary&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [E:Languages.Implementation.LanguageManager.OnLanguageChanged] Missing &lt;remarks&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Languages.Implementation.LanguageManager.ReloadLanguages] Missing &lt;summary&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Languages.Implementation.LanguageManager.ReloadLanguages] Missing &lt;remarks&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:Languages.Implementation.LanguageManager.SetCurrentLanguage(System.String)] Missing &lt;summary&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:Languages.Implementation.LanguageManager.SetCurrentLanguage(System.String)] Missing &lt;remarks&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:Languages.Implementation.LanguageManager.SetCurrentLanguage(System.String)] Missing &lt;param name=&quot;identifier&quot;/&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
@@ -305,6 +310,8 @@ BuildAssembler : warning : ShowMissingComponent: [M:Languages.Interfaces.ILangua
 BuildAssembler : warning : ShowMissingComponent: [M:Languages.Interfaces.ILanguageManager.GetWord(System.String)] Missing &lt;param name=&quot;key&quot;/&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [E:Languages.Interfaces.ILanguageManager.OnLanguageChanged] Missing &lt;summary&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [E:Languages.Interfaces.ILanguageManager.OnLanguageChanged] Missing &lt;remarks&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Languages.Interfaces.ILanguageManager.ReloadLanguages] Missing &lt;summary&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Languages.Interfaces.ILanguageManager.ReloadLanguages] Missing &lt;remarks&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:Languages.Interfaces.ILanguageManager.SetCurrentLanguage(System.String)] Missing &lt;summary&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:Languages.Interfaces.ILanguageManager.SetCurrentLanguage(System.String)] Missing &lt;remarks&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:Languages.Interfaces.ILanguageManager.SetCurrentLanguage(System.String)] Missing &lt;param name=&quot;identifier&quot;/&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
@@ -319,16 +326,16 @@ BuildAssembler : warning : ShowMissingComponent: [P:Languages.Interfaces.IWord.K
 BuildAssembler : warning : ShowMissingComponent: [P:Languages.Interfaces.IWord.Value] Missing &lt;summary&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [P:Languages.Interfaces.IWord.Value] Missing &lt;remarks&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [P:Languages.Interfaces.IWord.Value] Missing &lt;value&gt; documentation [F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj]
-  Processed 97 topic(s)
-  169 warning(s)
+  Processed 99 topic(s)
+  173 warning(s)
   CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 4 of 15.
   CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 2 of 30.
 Die Erstellung von Projekt &quot;F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\BuildTopics.proj&quot; ist abgeschlossen (Standardziele).
 
 Der Buildvorgang wurde erfolgreich ausgefhrt.
 
-Verstrichene Zeit 00:00:11.32
-    Last step completed in 00:00:11,8086
+Verstrichene Zeit 00:00:12.10
+    Last step completed in 00:00:12,6400
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
@@ -344,17 +351,17 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing Help 1 files in F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\Output\HtmlHelp1
-Processed 97 HTML files
+Processed 99 HTML files
 Sorting keywords and generating See Also indices
 Saving HTML Help 1 keyword index to F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\Documentation.hhk
 Saving HTML Help 1 table of contents to F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\Documentation.hhc
 
 Processing website files in F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\Output\Website
-Processed 97 HTML files
+Processed 99 HTML files
 Sorting keywords and generating See Also indices
 Saving website keyword index to F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\WebKI.xml
 Saving website table of contents to F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\WebTOC.xml
-    Last step completed in 00:00:01,6094
+    Last step completed in 00:00:02,2187
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -560,7 +567,7 @@ C:\Program Files (x86)\Sandcastle Help File Builder\PresentationStyles\VS2013\We
 C:\Program Files (x86)\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\Output\Website\scripts\branding-Website.js
 C:\Program Files (x86)\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\clipboard.min.js -&gt; F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\Output\Website\scripts\clipboard.min.js
 C:\Program Files (x86)\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\Output\Website\scripts\jquery-1.11.0.min.js
-    Last step completed in 00:00:00,9375
+    Last step completed in 00:00:01,0469
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1 table of contents file...
@@ -589,9 +596,9 @@ Compiling HTML Help 1 file...
   
   Compile time: 0 minutes, 0 seconds
   
-  99	Topics
+  101	Topics
   
-  935	Local links
+  958	Local links
   
   436	Internet links
   
@@ -601,11 +608,11 @@ Compiling HTML Help 1 file...
   
   
   
-  Created f:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\Output\HtmlHelp1\Documentation.chm, 133,082 bytes
+  Created f:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Working\Output\HtmlHelp1\Documentation.chm, 134,440 bytes
   
-  Compression decreased file by 675,102 bytes.
+  Compression decreased file by 688,651 bytes.
   
-    Last step completed in 00:00:02,0937
+    Last step completed in 00:00:02,4375
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Executing informational Generate Table of Contents build step for plug-ins (not used for MS Help Viewer)
@@ -619,11 +626,11 @@ Executing informational Generate Help Project build step for plug-ins (not used 
 Generating MS Help Viewer file...
 [C:\Program Files (x86)\MSBuild\14.0\bin\amd64\MSBuild.exe - BuildHelpViewerFile.proj]
   Compressing help content files...
-  Compression finished.  164 items added
+  Compression finished.  166 items added
   Saving F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Documentation.mshc...
   Finished saving F:\TODO\CSharpLanguageManager\Language\Documentation\Sandcastle\Documentation.mshc
-  Compressed 4 folders, 160 files.  Reduced size by 575.500 bytes (72%).
-    Last step completed in 00:00:01,6406
+  Compressed 4 folders, 162 files.  Reduced size by 586.213 bytes (72%).
+    Last step completed in 00:00:02,3594
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
@@ -639,16 +646,16 @@ Adding lightweight search and TOC elements to each topic...
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
 
-Copied 234 files for the website content
-    Last step completed in 00:00:01,4688
+Copied 236 files for the website content
+    Last step completed in 00:00:01,8750
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:01,0781
+    Last step completed in 00:00:01,4531
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 16.08.2017 19:05:11.  Total time: 00:00:27,0273
+Build completed successfully at 16.08.2017 19:21:52.  Total time: 00:00:31,8588
 
 </buildStep>
 </shfbBuild>
