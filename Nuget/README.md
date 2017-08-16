@@ -5,6 +5,11 @@ CSharpLanguageManager is an assembly/ library to build multilingual programms in
 The assembly was written and tested in .Net 4.6.2.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/v19epph90d3dgs1k?svg=true)](https://ci.appveyor.com/project/SeppPenner/csharplanguagemanager)
+[![GitHub issues](https://img.shields.io/github/issues/SeppPenner/CSharpLanguageManager.svg)](https://github.com/SeppPenner/CSharpLanguageManager/issues)
+[![GitHub forks](https://img.shields.io/github/forks/SeppPenner/CSharpLanguageManager.svg)](https://github.com/SeppPenner/CSharpLanguageManager/network)
+[![GitHub stars](https://img.shields.io/github/stars/SeppPenner/CSharpLanguageManager.svg)](https://github.com/SeppPenner/CSharpLanguageManager/stargazers)
+[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/CSharpLanguageManager/master/License.txt)
+[![Nuget](https://img.shields.io/badge/CSharpLanguageManager-Nuget-brightgreen.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/)
 
 ## Basic usage:
 If you just have one language loaded, you don't need to set the current language as
@@ -155,10 +160,12 @@ All language files need to be included into the "languages" folder in your appli
 ```
 
 An example project can be found [here](https://github.com/SeppPenner/CSharpLanguageManager/tree/master/ExampleProject).
+The project can be found on [nuget](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/1.0.0.5).
 
 Change history
 --------------
 
+* **Version 1.0.0.6 (2017-08-16)** : Added ReloadLanguages() method to ILanguageManager.
 * **Version 1.0.0.5 (2017-05-14)** : Added documentation.
 * **Version 1.0.0.4 (2017-03-24)** : Again simplified the usage of languages.
 * **Version 1.0.0.3 (2017-03-21)** : Simplified the usage of languages.
