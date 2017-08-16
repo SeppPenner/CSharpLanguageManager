@@ -32,5 +32,7 @@
 		<file src="Languages.pdb" target="lib\" />
 		<file src="languages\**" target="lib\languages" />
 		<file src="Documentation\**" target="lib\Documentation" />
+		<file src=".Net 4.5\**" target="lib\.Net 4.5" />
+		<file src=".Net 4.6.2\**" target="lib\.Net 4.6.2" />
     </files>
 </package>
