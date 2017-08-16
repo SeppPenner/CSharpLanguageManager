@@ -45,11 +45,6 @@ namespace Languages.Implementation
             return ConvertToListIlanguage(_languages);
         }
 
-        private static List<ILanguage> ConvertToListIlanguage(IEnumerable<Language> languages)
-        {
-            return languages.Cast<ILanguage>().ToList();
-        }
-
         /// <summary>
         ///     <inheritdoc />
         /// </summary>
@@ -86,6 +81,11 @@ namespace Languages.Implementation
             if (_currentLanguage == null)
                 ThrowLanguageNotProperlyLoadedException(name);
             LanguageHasChanged();
+        }
+
+        private static List<ILanguage> ConvertToListIlanguage(IEnumerable<Language> languages)
+        {
+            return languages.Cast<ILanguage>().ToList();
         }
 
         private static void ThrowLanguageNotProperlyLoadedException(string language)

@@ -12,6 +12,7 @@ namespace Languages.Exceptions
         /// <summary>
         ///     Default constructor
         /// </summary>
+        // ReSharper disable once UnusedMember.Global
         public LanguageInitializationException()
         {
         }
@@ -30,6 +31,7 @@ namespace Languages.Exceptions
         /// </summary>
         /// <param name="message">The <see cref="Exception" /> message to be shown</param>
         /// <param name="inner">The inner The <see cref="Exception" /> to be shown</param>
+        // ReSharper disable once UnusedMember.Global
         public LanguageInitializationException(string message, Exception inner)
             : base(message, inner)
         {

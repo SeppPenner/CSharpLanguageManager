@@ -11,6 +11,7 @@ namespace Languages.Exceptions
         /// <summary>
         ///     Default constructor
         /// </summary>
+        // ReSharper disable once UnusedMember.Global
         public WrongFileExtensionException()
         {
         }
@@ -19,6 +20,7 @@ namespace Languages.Exceptions
         ///     Constructor with message
         /// </summary>
         /// <param name="message">The <see cref="Exception" /> message to be shown</param>
+        // ReSharper disable once UnusedMember.Global
         public WrongFileExtensionException(string message)
             : base(message)
         {

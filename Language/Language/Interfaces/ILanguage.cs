@@ -15,7 +15,6 @@ namespace Languages.Interfaces
         /// </summary>
         // ReSharper disable once UnusedMemberInSuper.Global
         // ReSharper disable once UnusedMember.Global
-        // ReSharper disable once UnusedMemberInSuper.Global
         string Identifier { get; set; }
 
         /// <summary>
@@ -23,7 +22,6 @@ namespace Languages.Interfaces
         /// </summary>
         // ReSharper disable once UnusedMemberInSuper.Global
         // ReSharper disable once UnusedMember.Global
-        // ReSharper disable once UnusedMemberInSuper.Global
         string Name { get; set; }
 
         /// <summary>
@@ -31,7 +29,6 @@ namespace Languages.Interfaces
         /// </summary>
         // ReSharper disable once UnusedMemberInSuper.Global
         // ReSharper disable once UnusedMember.Global
-        // ReSharper disable once UnusedMemberInSuper.Global
         List<Word> Words { get; set; }
 
         /// <summary>
@@ -41,7 +38,6 @@ namespace Languages.Interfaces
         /// <returns>The <see cref="Word" /> defined by the key.</returns>
         /// // ReSharper disable once UnusedMemberInSuper.Global
         // ReSharper disable once UnusedMember.Global
-        // ReSharper disable once UnusedMemberInSuper.Global
         string GetWord(string key);
 
         /// <summary>

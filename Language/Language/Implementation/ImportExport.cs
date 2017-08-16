@@ -17,6 +17,7 @@ namespace Languages.Implementation
         /// <summary>
         ///     <inheritdoc />
         /// </summary>
+        // ReSharper disable once MemberCanBePrivate.Global
         public List<Exception> Exceptions { get; private set; }
 
         /// <summary>

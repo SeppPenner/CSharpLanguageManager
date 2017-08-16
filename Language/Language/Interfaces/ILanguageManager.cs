@@ -52,7 +52,7 @@ namespace Languages.Interfaces
         event EventHandler OnLanguageChanged;
 
         /// <summary>
-        /// Reloads all language files.
+        ///     Reloads all language files.
         /// </summary>
         // ReSharper disable once UnusedMember.Global
         void ReloadLanguages();

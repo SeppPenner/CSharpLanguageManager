@@ -22,6 +22,7 @@ namespace Languages.Events
         ///     Gets the <see cref="LanguageChangedEventArgs" /> info
         /// </summary>
         /// <returns>The event info of the <see cref="LanguageChangedEventArgs" /></returns>
+        // ReSharper disable once UnusedMember.Global
         public string GetInfo()
         {
             return _eventInfo;
