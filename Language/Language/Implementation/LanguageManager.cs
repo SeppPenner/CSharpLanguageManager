@@ -27,6 +27,14 @@ namespace Languages.Implementation
         /// <summary>
         ///     <inheritdoc />
         /// </summary>
+        public void ReloadLanguages()
+        {
+            LoadDefaults();
+        }
+
+        /// <summary>
+        ///     <inheritdoc />
+        /// </summary>
         public event EventHandler OnLanguageChanged;
 
         /// <summary>

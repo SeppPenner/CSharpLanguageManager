@@ -50,5 +50,11 @@ namespace Languages.Interfaces
         /// </summary>
         // ReSharper disable once EventNeverSubscribedTo.Global
         event EventHandler OnLanguageChanged;
+
+        /// <summary>
+        /// Reloads all language files.
+        /// </summary>
+        // ReSharper disable once UnusedMember.Global
+        void ReloadLanguages();
     }
 }
