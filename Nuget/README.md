@@ -159,12 +159,13 @@ All language files need to be included into the "languages" folder in your appli
 </Language>
 ```
 
-An example project can be found [here](https://github.com/SeppPenner/CSharpLanguageManager/tree/master/ExampleProject).
-The project can be found on [nuget](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/1.0.0.5).
+An example project can be found [here](https://github.com/SeppPenner/CSharpLanguageManager/tree/master/Language/TestLanguage).
+The project can be found on [nuget](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language).
 
 Change history
 --------------
 
+* **Version 1.0.0.7 (2017-08-16)** : Adjusted ReloadLanguages() method to work properly.
 * **Version 1.0.0.6 (2017-08-16)** : Added ReloadLanguages() method to ILanguageManager.
 * **Version 1.0.0.5 (2017-05-14)** : Added documentation.
 * **Version 1.0.0.4 (2017-03-24)** : Again simplified the usage of languages.

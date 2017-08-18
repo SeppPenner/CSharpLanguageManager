@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>HaemmerElectronics.SeppPenner.Language</id>
-    <version>1.0.0.6</version>
+    <version>1.0.0.7</version>
     <authors>SeppPenner</authors>
     <owners>SeppPenner</owners>
     <licenseUrl>https://github.com/SeppPenner/CSharpLanguageManager/blob/master/License.txt</licenseUrl>
@@ -14,6 +14,7 @@
 		The assembly was written and tested in .Net 4.6.2.
 	</description>
     <releaseNotes>
+		Version 1.0.0.7 (2017-08-18) : Adjusted ReloadLanguages() method to work properly.
 		Version 1.0.0.6 (2017-08-16) : Added ReloadLanguages() method to ILanguageManager.
 		Version 1.0.0.5 (2017-05-14) : Added documentation.
 		Version 1.0.0.4 (2017-03-24) : Again simplified the usage of languages.
