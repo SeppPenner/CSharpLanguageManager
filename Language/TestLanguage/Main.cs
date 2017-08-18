@@ -45,6 +45,7 @@ namespace TestLanguage
         private void ButtonReloadLanguageFiles_Click(object sender, EventArgs e)
         {
             _lm.ReloadLanguages();
+            _lm.SetCurrentLanguage("de-DE");
         }
     }
 }
