@@ -10,6 +10,7 @@ The assembly was written and tested in .Net 4.6.2.
 [![GitHub stars](https://img.shields.io/github/stars/SeppPenner/CSharpLanguageManager.svg)](https://github.com/SeppPenner/CSharpLanguageManager/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/CSharpLanguageManager/master/License.txt)
 [![Nuget](https://img.shields.io/badge/CSharpLanguageManager-Nuget-brightgreen.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/HaemmerElectronics.SeppPenner.Language.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/)
 
 ## Basic usage:
 If you just have one language loaded, you don't need to set the current language as
