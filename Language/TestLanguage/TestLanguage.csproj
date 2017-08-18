@@ -40,10 +40,6 @@
     <ApplicationIcon>Test.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Languages, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Languages.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -86,6 +82,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Test.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Language\Languages.csproj">
+      <Project>{da530b1a-4f1b-49b0-b91f-855a6ad9c7b8}</Project>
+      <Name>Languages</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
