@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>HaemmerElectronics.SeppPenner.Language</id>
-    <version>1.0.0.7</version>
+    <version>1.0.0.8</version>
     <authors>SeppPenner</authors>
     <owners>SeppPenner</owners>
     <licenseUrl>https://github.com/SeppPenner/CSharpLanguageManager/blob/master/License.txt</licenseUrl>
@@ -11,9 +11,10 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>
 		CSharpLanguageManager is an assembly/ library to build multilingual programms in .Net.
-		The assembly was written and tested in .Net 4.6.2.
+		The assembly was written and tested in .Net 4.7.
 	</description>
     <releaseNotes>
+		Version 1.0.0.8 (2018-01-22) : Added .Net 4.7. dll.
 		Version 1.0.0.7 (2017-08-18) : Adjusted ReloadLanguages() method to work properly.
 		Version 1.0.0.6 (2017-08-16) : Added ReloadLanguages() method to ILanguageManager.
 		Version 1.0.0.5 (2017-05-14) : Added documentation.
@@ -33,5 +34,6 @@
 		<file src="Documentation\**" target="lib\Documentation" />
 		<file src=".Net 4.5\**" target="lib\.Net 4.5" />
 		<file src=".Net 4.6.2\**" target="lib\.Net 4.6.2" />
+		<file src=".Net 4.7\**" target="lib\.Net 4.7" />
     </files>
 </package>

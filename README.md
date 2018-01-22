@@ -2,7 +2,7 @@ CSharpLanguageManager
 ====================================
 
 CSharpLanguageManager is an assembly/ library to build multilingual programms in .Net.
-The assembly was written and tested in .Net 4.6.2.
+The assembly was written and tested in .Net 4.7.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/v19epph90d3dgs1k?svg=true)](https://ci.appveyor.com/project/SeppPenner/csharplanguagemanager)
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/CSharpLanguageManager.svg)](https://github.com/SeppPenner/CSharpLanguageManager/issues)
@@ -166,6 +166,7 @@ The project can be found on [nuget](https://www.nuget.org/packages/HaemmerElectr
 Change history
 --------------
 
+* **Version 1.0.0.8 (2018-01-22)** : Added .Net 4.7. dll.
 * **Version 1.0.0.7 (2017-08-16)** : Adjusted ReloadLanguages() method to work properly.
 * **Version 1.0.0.6 (2017-08-16)** : Added ReloadLanguages() method to ILanguageManager.
 * **Version 1.0.0.5 (2017-05-14)** : Added documentation.
