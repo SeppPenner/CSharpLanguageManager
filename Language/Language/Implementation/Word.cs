@@ -5,6 +5,7 @@ namespace Languages.Implementation
     /// <summary>
     ///     <inheritdoc />
     /// </summary>
+	[Serializable]
     // ReSharper disable once ClassNeverInstantiated.Global
     public class Word : IWord
     {
