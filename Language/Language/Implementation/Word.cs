@@ -1,4 +1,5 @@
-﻿using Languages.Interfaces;
+﻿using System;
+using Languages.Interfaces;
 
 namespace Languages.Implementation
 {
