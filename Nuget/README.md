@@ -36,7 +36,7 @@ public void Test()
 
 ## Subscription to OnLanguageChanged Version 1.0.0.4 and above:
 You can "subscribe" to the EventHandler OnLanguageChanged to update your GUI whenever the language is changed.
-This can be done like the following: (For more information see [the example project](https://github.com/SeppPenner/CSharpLanguageManager/tree/master/ExampleProject))
+This can be done like the following: (For more information see [the example project](https://github.com/SeppPenner/CSharpLanguageManager/blob/master/Language/TestLanguage/Main.cs))
 ```csharp
 namespace TestLanguage
 {
@@ -85,7 +85,7 @@ _lm.SetCurrentLanguageFromName(comboBoxLanguage.SelectedItem.ToString());
 
 ## Subscription to OnLanguageChanged Version 1.0.0.0 to 1.0.0.3:
 You can "subscribe" to the EventHandler OnLanguageChanged to update your GUI whenever the language is changed.
-This can be done like the following: (For more information see [the example project](https://github.com/SeppPenner/CSharpLanguageManager/tree/master/ExampleProject))
+This can be done like the following: (For more information see [the example project](https://github.com/SeppPenner/CSharpLanguageManager/blob/master/Language/TestLanguage/Main.cs))
 
 ```csharp
 using System;
@@ -166,6 +166,7 @@ The project can be found on [nuget](https://www.nuget.org/packages/HaemmerElectr
 Change history
 --------------
 
+* **Version 1.0.0.10 (2018-03-12)** : Fixed a bug in the package with wrong .Net frameworks.
 * **Version 1.0.0.9 (2018-02-11)** : Updated the .Net 4.5 and .Net 4.6.2 dll files, too.
 * **Version 1.0.0.8 (2018-01-22)** : Added .Net 4.7. dll.
 * **Version 1.0.0.7 (2017-08-16)** : Adjusted ReloadLanguages() method to work properly.
