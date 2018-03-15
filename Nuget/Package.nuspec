@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>HaemmerElectronics.SeppPenner.Language</id>
-    <version>1.0.0.10</version>
+    <version>1.0.0.11</version>
     <authors>SeppPenner</authors>
     <owners>SeppPenner</owners>
     <licenseUrl>https://github.com/SeppPenner/CSharpLanguageManager/blob/master/License.txt</licenseUrl>
@@ -14,6 +14,7 @@
 		The assembly was written and tested in .Net 4.7.
 	</description>
     <releaseNotes>
+		Version 1.0.0.11 (2018-03-15) : Fixed bug with different .Net versions in the Nuget package.
 		Version 1.0.0.10 (2018-03-12) : Fixed a bug in the package with wrong .Net frameworks.
 		Version 1.0.0.9 (2018-02-11) : Updated the .Net 4.5 and .Net 4.6.2 dll files, too.
 		Version 1.0.0.8 (2018-01-22) : Added .Net 4.7. dll.
@@ -34,8 +35,8 @@
 		<file src="License.txt" target="lib\" />
 		<file src="languages\**" target="lib\languages" />
 		<file src="Documentation\**" target="lib\Documentation" />
-		<file src=".Net 4.5\**" target="lib\.Net 4.5" />
-		<file src=".Net 4.6.2\**" target="lib\.Net 4.6.2" />
-		<file src=".Net 4.7\**" target="lib\.Net 4.7" />
+		<file src=".Net 4.5\**" target="lib\net45" />
+		<file src=".Net 4.6.2\**" target="lib\net462" />
+		<file src=".Net 4.7\**" target="lib\net47" />
     </files>
 </package>
