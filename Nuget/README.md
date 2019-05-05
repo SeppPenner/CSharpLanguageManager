@@ -13,6 +13,14 @@ The assembly was written and tested in .Net 4.8.
 [![NuGet Downloads](https://img.shields.io/nuget/dt/HaemmerElectronics.SeppPenner.Language.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/CSharpLanguageManager/badge.svg)](https://snyk.io/test/github/SeppPenner/CSharpLanguageManager)
 
+## Available for
+* NetFramework 4.5
+* NetFramework 4.6
+* NetFramework 4.6.2
+* NetFramework 4.7
+* NetFramework 4.7.2
+* NetFramework 4.8
+
 ## Basic usage:
 If you just have one language loaded, you don't need to set the current language as
 the language manager uses the only language as default.
