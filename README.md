@@ -2,7 +2,7 @@ CSharpLanguageManager
 ====================================
 
 CSharpLanguageManager is an assembly/ library to build multilingual programms in .Net.
-The assembly was written and tested in .Net 4.7.
+The assembly was written and tested in .Net 4.8.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/v19epph90d3dgs1k?svg=true)](https://ci.appveyor.com/project/SeppPenner/csharplanguagemanager)
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/CSharpLanguageManager.svg)](https://github.com/SeppPenner/CSharpLanguageManager/issues)
@@ -11,6 +11,7 @@ The assembly was written and tested in .Net 4.7.
 [![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/CSharpLanguageManager/master/License.txt)
 [![Nuget](https://img.shields.io/badge/CSharpLanguageManager-Nuget-brightgreen.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/HaemmerElectronics.SeppPenner.Language.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/)
+[![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/CSharpLanguageManager/badge.svg)](https://snyk.io/test/github/SeppPenner/CSharpLanguageManager)
 
 ## Basic usage:
 If you just have one language loaded, you don't need to set the current language as
@@ -166,6 +167,7 @@ The project can be found on [nuget](https://www.nuget.org/packages/HaemmerElectr
 Change history
 --------------
 
+* **Version 1.0.0.12 (2019-05-05)** : Updated .Net version to 4.8.
 * **Version 1.0.0.11 (2018-03-15)** : Fixed bug with different .Net versions in the Nuget package.
 * **Version 1.0.0.10 (2018-03-12)** : Fixed a bug in the package with wrong .Net frameworks.
 * **Version 1.0.0.9 (2018-02-11)** : Updated the .Net 4.5 and .Net 4.6.2 dll files, too.
