@@ -27,8 +27,8 @@ the language manager uses the only language as default.
 ```csharp
 public void Test()
 {
-	ILanguageManager _lm = new LanguageManager();
-	var test = _lm.GetCurrentLanguage().GetWord("YourKey");
+    ILanguageManager _lm = new LanguageManager();
+    var test = _lm.GetCurrentLanguage().GetWord("YourKey");
 }
 ```
 If you have more than one language loaded, you need to set the current (wanted) language.
@@ -36,10 +36,10 @@ The language identifiers are taken from https://msdn.microsoft.com/de-de/library
 ```csharp
 public void Test()
 {
-	ILanguageManager _lm = new LanguageManager();
-	_lm.SetCurrentLanguage("de-DE"); //Version 1.0.0.0 to Version 1.0.0.3
-	_lm.SetCurrentLanguageFromName("German"); //Version 1.0.0.4 and above
-	var test = _lm.GetCurrentLanguage().GetWord("YourKey");
+    ILanguageManager _lm = new LanguageManager();
+    _lm.SetCurrentLanguage("de-DE"); //Version 1.0.0.0 to Version 1.0.0.3
+    _lm.SetCurrentLanguageFromName("German"); //Version 1.0.0.4 and above
+    var test = _lm.GetCurrentLanguage().GetWord("YourKey");
 }
 ```
 
@@ -159,13 +159,13 @@ All language files need to be included into the "languages" folder in your appli
 <Language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <!--According to https://msdn.microsoft.com/de-de/library/ee825488(v=cs.20).aspx-->
     <Identifier>de-DE</Identifier> 
-	<Name>German<Name>
-	<Words>
-		<Word>
-			<Key>YourKey</Key>
-			<Value>TestString</Value>
-		</Word>
-	</Words>
+    <Name>German<Name>
+    <Words>
+        <Word>
+            <Key>YourKey</Key>
+            <Value>TestString</Value>
+        </Word>
+    </Words>
 </Language>
 ```
 
