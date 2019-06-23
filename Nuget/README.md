@@ -175,6 +175,7 @@ The project can be found on [nuget](https://www.nuget.org/packages/HaemmerElectr
 Change history
 --------------
 
+* **Version 1.0.1.0 (2019-06-23)** : Added icon to the nuget package.
 * **Version 1.0.0.12 (2019-05-05)** : Updated .Net version to 4.8.
 * **Version 1.0.0.11 (2018-03-15)** : Fixed bug with different .Net versions in the Nuget package.
 * **Version 1.0.0.10 (2018-03-12)** : Fixed a bug in the package with wrong .Net frameworks.
