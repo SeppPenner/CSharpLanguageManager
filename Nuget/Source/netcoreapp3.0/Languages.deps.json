@@ -1,12 +1,11 @@
 {
   "runtimeTarget": {
-    "name": ".NETStandard,Version=v2.1/",
+    "name": ".NETCoreApp,Version=v3.0",
     "signature": ""
   },
   "compilationOptions": {},
   "targets": {
-    ".NETStandard,Version=v2.1": {},
-    ".NETStandard,Version=v2.1/": {
+    ".NETCoreApp,Version=v3.0": {
       "Languages/1.0.3+4": {
         "dependencies": {
           "GitVersionTask": "5.0.1"

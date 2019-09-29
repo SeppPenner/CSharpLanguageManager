@@ -22,13 +22,14 @@ The assembly was written and tested in .NetStandard 2.0.
 * NetFramework 4.8
 * NetStandard 2.0
 * NetStandard 2.1
+* NetCore 3.0
 
 ## Basic usage:
 Check out the how to use file [here](https://github.com/SeppPenner/CSharpLanguageManager/blob/master/HowToUse.md).
 
 Change history
 --------------
-
+* **Version 1.0.3.0 (2019-09-29)** : Added build for NetCore 3.0.
 * **Version 1.0.2.0 (2019-09-29)** : Moved to NetStandard 2.0, added multi-build, simplified build process, fixed code style.
 * **Version 1.0.1.0 (2019-06-23)** : Added icon to the nuget package.
 * **Version 1.0.0.12 (2019-05-05)** : Updated .Net version to 4.8.

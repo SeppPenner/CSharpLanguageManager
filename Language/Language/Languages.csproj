@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;net46;net462;net47;net472;net48;netstandard2.0;netstandard2.1;</TargetFrameworks>
+    <TargetFrameworks>net45;net46;net462;net47;net472;net48;netstandard2.0;netstandard2.1;netcoreapp3.0;</TargetFrameworks>
     <AssemblyName>Languages</AssemblyName>
     <RootNamespace>Languages</RootNamespace>
     <Authors>SeppPenner</Authors>
@@ -10,11 +10,11 @@
     <PackageProjectUrl>https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/SeppPenner/CSharpLanguageManager</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/SeppPenner/https://github.com/SeppPenner/CSharpLanguageManager/blob/master/License.txt</PackageLicenseUrl>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
-    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
+    <Version>1.0.3</Version>
     <PackageTags>c# language csharp multilingual</PackageTags>
-    <PackageReleaseNotes>Added icon to the nuget package.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added build for NetCore 3.0.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
@@ -46,13 +46,17 @@
     <DocumentationFile>bin\Release\netstandard2.0\Languages.xml</DocumentationFile>
   </PropertyGroup>
   
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.1|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.1\Languages.xml</DocumentationFile>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp3.0|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.1\Languages.xml</DocumentationFile>
+  </PropertyGroup>
+  
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-  </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.1|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard2.1\Languages.xml</DocumentationFile>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.1|AnyCPU'">
