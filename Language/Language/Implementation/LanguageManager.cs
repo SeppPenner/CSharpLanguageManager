@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Languages.Events;
+﻿using Languages.Events;
 using Languages.Exceptions;
 using Languages.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Languages.Implementation
 {
     /// <summary>
-    ///     <inheritdoc />
+    ///     <inheritdoc cref="ILanguageManager"/>.
     /// </summary>
     // ReSharper disable once UnusedMember.Global
     public class LanguageManager : ILanguageManager
@@ -19,13 +19,17 @@ namespace Languages.Implementation
 
         private List<Language> _languages;
 
+        /// <summary>
+        ///     <inheritdoc cref="ILanguageManager"/>.
+        ///     Creates a new instance of the <see cref="LanguageManager"/> class.
+        /// </summary>
         public LanguageManager()
         {
             LoadDefaults();
         }
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="ILanguageManager"/>.
         /// </summary>
         public void ReloadLanguages()
         {
@@ -33,20 +37,20 @@ namespace Languages.Implementation
         }
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="ILanguageManager"/>.
         /// </summary>
         public event EventHandler OnLanguageChanged;
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="ILanguageManager"/>.
         /// </summary>
         public List<ILanguage> GetLanguages()
         {
-            return ConvertToListIlanguage(_languages);
+            return ConvertToListILanguage(_languages);
         }
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="ILanguageManager"/>.
         /// </summary>
         public ILanguage GetCurrentLanguage()
         {
@@ -54,7 +58,7 @@ namespace Languages.Implementation
         }
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="ILanguageManager"/>.
         /// </summary>
         public string GetWord(string key)
         {
@@ -62,7 +66,7 @@ namespace Languages.Implementation
         }
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="ILanguageManager"/>.
         /// </summary>
         public void SetCurrentLanguage(string identifier)
         {
@@ -73,7 +77,7 @@ namespace Languages.Implementation
         }
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="ILanguageManager"/>.
         /// </summary>
         public void SetCurrentLanguageFromName(string name)
         {
@@ -83,7 +87,7 @@ namespace Languages.Implementation
             LanguageHasChanged();
         }
 
-        private static List<ILanguage> ConvertToListIlanguage(IEnumerable<Language> languages)
+        private static List<ILanguage> ConvertToListILanguage(IEnumerable<Language> languages)
         {
             return languages.Cast<ILanguage>().ToList();
         }
@@ -94,6 +98,10 @@ namespace Languages.Implementation
                 new Exception("The language " + language + " is not loaded properly"));
         }
 
+        /// <summary>
+        /// Called whenever the language is changed.
+        /// </summary>
+        /// <param name="e">The parameters.</param>
         protected virtual void LanguageChanged(EventArgs e)
         {
             var handler = OnLanguageChanged;

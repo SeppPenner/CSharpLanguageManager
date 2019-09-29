@@ -1,33 +1,33 @@
-﻿using System;
+﻿using Languages.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Languages.Interfaces;
 
 namespace Languages.Implementation
 {
     /// <summary>
-    ///     <inheritdoc />
+    ///     <inheritdoc cref="ILanguage"/>.
     /// </summary>
     [Serializable]
     public class Language : ILanguage
     {
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="ILanguage"/>.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="ILanguage"/>.
         /// </summary>
         public string Identifier { get; set; }
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="ILanguage"/>.
         /// </summary>
         public List<Word> Words { get; set; }
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="ILanguage"/>.
         /// </summary>
         public string GetWord(string key)
         {
@@ -35,7 +35,7 @@ namespace Languages.Implementation
         }
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="ILanguage"/>.
         /// </summary>
         public CultureInfo GetCulture()
         {

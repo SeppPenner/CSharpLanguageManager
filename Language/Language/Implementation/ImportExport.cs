@@ -1,27 +1,27 @@
-﻿using System;
+﻿using Languages.Exceptions;
+using Languages.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Xml.Linq;
 using System.Xml.Serialization;
-using Languages.Exceptions;
-using Languages.Interfaces;
 
 namespace Languages.Implementation
 {
     /// <summary>
-    ///     <inheritdoc />
+    ///     <inheritdoc cref="IImportExport" />.
     /// </summary>
     public class ImportExport : IImportExport
     {
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="IImportExport" />.
         /// </summary>
         // ReSharper disable once MemberCanBePrivate.Global
         public List<Exception> Exceptions { get; private set; }
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="IImportExport" />.
         /// </summary>
         public Language Load(string filename)
         {
@@ -30,7 +30,7 @@ namespace Languages.Implementation
         }
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="IImportExport" />.
         /// </summary>
         public List<Language> LoadDefaults()
         {
@@ -46,7 +46,7 @@ namespace Languages.Implementation
         }
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="IImportExport" />.
         /// </summary>
         public List<Exception> GetExceptions()
         {
@@ -54,13 +54,13 @@ namespace Languages.Implementation
         }
 
         /// <summary>
-        ///     <inheritdoc />
+        ///     <inheritdoc cref="IImportExport" />.
         /// </summary>
-        public List<Language> Load(IEnumerable<string> filenames)
+        public List<Language> Load(IEnumerable<string> fileNames)
         {
             ClearExceptions();
             var languages = new List<Language>();
-            foreach (var file in filenames)
+            foreach (var file in fileNames)
                 TryLoadLanguage(languages, file);
             return languages;
         }
@@ -71,7 +71,7 @@ namespace Languages.Implementation
                 throw new ArgumentNullException(nameof(location));
         }
 
-        private void TryLoadLanguage(List<Language> languages, string file)
+        private void TryLoadLanguage(ICollection<Language> languages, string file)
         {
             try
             {
@@ -81,6 +81,7 @@ namespace Languages.Implementation
                     languages.Add(Load(file));
                     return;
                 }
+
                 SaveException(new WrongFileExtensionException("File " + file + " is no XML file",
                     new Exception("File " + file + " is no XML file")));
             }
@@ -102,10 +103,10 @@ namespace Languages.Implementation
             Exceptions = new List<Exception>();
         }
 
-        private T CreateObjectsFromString<T>(XDocument xDocument)
+        private static T CreateObjectsFromString<T>(XDocument xDocument)
         {
             var xmlSerializer = new XmlSerializer(typeof(T));
-            return (T) xmlSerializer.Deserialize(new StringReader(xDocument.ToString()));
+            return (T)xmlSerializer.Deserialize(new StringReader(xDocument.ToString()));
         }
     }
 }
