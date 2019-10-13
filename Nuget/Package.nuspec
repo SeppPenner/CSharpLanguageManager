@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>HaemmerElectronics.SeppPenner.Language</id>
-    <version>1.0.3.0</version>
+    <version>1.0.4.0</version>
     <authors>SeppPenner</authors>
     <owners>SeppPenner</owners>
     <licenseUrl>https://github.com/SeppPenner/CSharpLanguageManager/blob/master/License.txt</licenseUrl>
@@ -14,7 +14,7 @@
 		The assembly was written and tested in .NetStandard 2.0.
 	</description>
     <releaseNotes>
-	    Version 1.0.3.0 (2019-09-29): Added build for NetCore 3.0.
+	    Version 1.0.4.0 (2019-10-13): Fixed information in dll / AssemblyInfo.
 	</releaseNotes>
     <copyright>Copyright © Hämmer Electronics</copyright>
     <tags>c# language csharp multilingual</tags>

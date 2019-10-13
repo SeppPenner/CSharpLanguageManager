@@ -5,7 +5,7 @@
     <AssemblyName>Languages</AssemblyName>
     <RootNamespace>Languages</RootNamespace>
     <Authors>SeppPenner</Authors>
-    <Company />
+    <Company>Hämmer Electronics</Company>
     <Description>CSharpLanguageManager is an assembly/ library to build multilingual programms in .Net.</Description>
     <PackageProjectUrl>https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/SeppPenner/CSharpLanguageManager</RepositoryUrl>
