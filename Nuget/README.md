@@ -22,6 +22,7 @@ The assembly was written and tested in .NetStandard 2.0.
 * NetFramework 4.8
 * NetStandard 2.0
 * NetStandard 2.1
+* NetCore 2.2
 * NetCore 3.0
 
 ## Basic usage:
@@ -30,6 +31,7 @@ Check out the how to use file [here](https://github.com/SeppPenner/CSharpLanguag
 Change history
 --------------
 
+* **Version 1.0.4.1 (2019-10-28)** : Updated nuget packages, added GitVersionTask.
 * **Version 1.0.4.0 (2019-10-13)** : Fixed information in dll / AssemblyInfo.
 * **Version 1.0.3.0 (2019-09-29)** : Added build for NetCore 3.0.
 * **Version 1.0.2.0 (2019-09-29)** : Moved to NetStandard 2.0, added multi-build, simplified build process, fixed code style.

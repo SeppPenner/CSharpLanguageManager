@@ -2,29 +2,56 @@
 <package >
   <metadata>
     <id>HaemmerElectronics.SeppPenner.Language</id>
-    <version>1.0.4.0</version>
+    <version>1.0.4.1</version>
     <authors>SeppPenner</authors>
     <owners>SeppPenner</owners>
-    <licenseUrl>https://github.com/SeppPenner/CSharpLanguageManager/blob/master/License.txt</licenseUrl>
     <projectUrl>https://github.com/SeppPenner/CSharpLanguageManager</projectUrl>
-    <iconUrl>https://github.com/SeppPenner/CSharpLanguageManager/blob/master/Nuget/Language.ico?raw=true</iconUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>
+		CSharpLanguageManager is an assembly/ library to build multilingual programms in .Net.
+    </summary>
+	<title>Language from SeppPenner</title>
+	<icon>images\Icon.png</icon>
+	<license type="file">License.txt</license>
+	<requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>
 		CSharpLanguageManager is an assembly/ library to build multilingual programms in .Net.
 		The assembly was written and tested in .NetStandard 2.0.
 	</description>
     <releaseNotes>
-	    Version 1.0.4.0 (2019-10-13): Fixed information in dll / AssemblyInfo.
+	    Version 1.0.4.1 (2019-10-28): Updated nuget packages.
 	</releaseNotes>
     <copyright>Copyright © Hämmer Electronics</copyright>
     <tags>c# language csharp multilingual</tags>
+	<dependencies>
+      <group targetFramework="net45">   
+      </group>
+	  <group targetFramework="net46">
+      </group>
+	  <group targetFramework="net47">	
+      </group>
+	  <group targetFramework="net48"> 
+      </group>
+	  <group targetFramework="net462">
+      </group>
+	  <group targetFramework="net472">   
+      </group>
+      <group targetFramework="netstandard2.0">
+        <dependency id="NETStandard.Library" version="2.0.0" />
+      </group>
+	  <group targetFramework="netstandard2.1">
+        <dependency id="NETStandard.Library" version="2.1.0" />
+      </group>
+      <group targetFramework="netcoreapp2.2">
+      </group>
+	  <group targetFramework="netcoreapp3.0">
+      </group>
+    </dependencies>
   </metadata>
   <files>
 		<file src="README.md" target="lib\" />
 		<file src="HowToUse.md" target="lib\" />
-		<file src="License.txt" target="lib\" />
+		<file src="License.txt" target="" />
 		<file src="languages\**" target="lib\languages" />
-		<file src="Documentation\**" target="lib\Documentation" />
 		<file src="Source\net45\**" target="lib\net45" />
 		<file src="Source\net46\**" target="lib\net46" />
 		<file src="Source\net462\**" target="lib\net462" />
@@ -33,6 +60,8 @@
 		<file src="Source\net48\**" target="lib\net48" />
 		<file src="Source\netstandard2.0\**" target="lib\netstandard2.0" />
 		<file src="Source\netstandard2.1\**" target="lib\netstandard2.1" />
+		<file src="Source\netcoreapp2.2\**" target="lib\netcoreapp2.2" />
 		<file src="Source\netcoreapp3.0\**" target="lib\netcoreapp3.0" />
+		<file src="..\Icon.png" target="images\" />
     </files>
 </package>
