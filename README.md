@@ -12,6 +12,7 @@ The assembly was written and tested in .NetStandard 2.0.
 [![Nuget](https://img.shields.io/badge/CSharpLanguageManager-Nuget-brightgreen.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/HaemmerElectronics.SeppPenner.Language.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/CSharpLanguageManager/badge.svg)](https://snyk.io/test/github/SeppPenner/CSharpLanguageManager)
+[![Gitter](https://badges.gitter.im/CSharpLanguageManager/community.svg)](https://gitter.im/CSharpLanguageManager/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Available for
 * NetFramework 4.5
