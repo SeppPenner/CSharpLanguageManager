@@ -12,9 +12,9 @@ The assembly was written and tested in .NetStandard 2.0.
 [![Nuget](https://img.shields.io/badge/CSharpLanguageManager-Nuget-brightgreen.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/HaemmerElectronics.SeppPenner.Language.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/CSharpLanguageManager/badge.svg)](https://snyk.io/test/github/SeppPenner/CSharpLanguageManager)
+[![Gitter](https://badges.gitter.im/CSharpLanguageManager/community.svg)](https://gitter.im/CSharpLanguageManager/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Available for
-* NetFramework 4.5
 * NetFramework 4.6
 * NetFramework 4.6.2
 * NetFramework 4.7
@@ -22,8 +22,12 @@ The assembly was written and tested in .NetStandard 2.0.
 * NetFramework 4.8
 * NetStandard 2.0
 * NetStandard 2.1
-* NetCore 2.2
-* NetCore 3.0
+* NetCore 2.1
+* NetCore 3.1
+
+## Net Core and Net Framework latest and LTS versions
+* https://dotnet.microsoft.com/download/dotnet-framework
+* https://dotnet.microsoft.com/download/dotnet-core
 
 ## Basic usage:
 Check out the how to use file [here](https://github.com/SeppPenner/CSharpLanguageManager/blob/master/HowToUse.md).
