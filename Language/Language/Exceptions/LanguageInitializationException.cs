@@ -1,8 +1,18 @@
-﻿using Languages.Implementation;
-using System;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="LanguageInitializationException.cs" company="Haemmer Electronics">
+//   Copyright (c) 2020 All rights reserved.
+// </copyright>
+// <summary>
+//   An <see cref="Exception" /> that is thrown whenever the <see cref="Language" /> is not initialized correctly.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace Languages.Exceptions
 {
+    using System;
+
+    using Languages.Implementation;
+
     /// <summary>
     ///     An <see cref="Exception" /> that is thrown whenever the <see cref="Language" /> is not initialized correctly.
     /// </summary>
@@ -10,7 +20,7 @@ namespace Languages.Exceptions
     public class LanguageInitializationException : Exception
     {
         /// <summary>
-        ///     Default constructor.
+        ///     Initializes a new instance of the <see cref="LanguageInitializationException"/> class.
         /// </summary>
         // ReSharper disable once UnusedMember.Global
         public LanguageInitializationException()
@@ -18,7 +28,7 @@ namespace Languages.Exceptions
         }
 
         /// <summary>
-        ///     Constructor with message.
+        ///     Initializes a new instance of the <see cref="LanguageInitializationException"/> class.
         /// </summary>
         /// <param name="message">The <see cref="Exception" /> message to be shown.</param>
         public LanguageInitializationException(string message)
@@ -27,7 +37,7 @@ namespace Languages.Exceptions
         }
 
         /// <summary>
-        ///     Constructor with message and inner <see cref="Exception" /> message.
+        ///     Initializes a new instance of the <see cref="LanguageInitializationException"/> class.
         /// </summary>
         /// <param name="message">The <see cref="Exception" /> message to be shown.</param>
         /// <param name="inner">The inner The <see cref="Exception" /> to be shown.</param>

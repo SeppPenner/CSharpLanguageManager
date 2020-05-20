@@ -1,8 +1,18 @@
-﻿using Languages.Implementation;
-using System;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="LanguageNotLoadedException.cs" company="Haemmer Electronics">
+//   Copyright (c) 2020 All rights reserved.
+// </copyright>
+// <summary>
+//   An <see cref="Exception" /> that is thrown whenever the <see cref="Language" /> is not loaded correctly.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace Languages.Exceptions
 {
+    using System;
+
+    using Languages.Implementation;
+
     /// <summary>
     ///     An <see cref="Exception" /> that is thrown whenever the <see cref="Language" /> is not loaded correctly.
     /// </summary>
@@ -10,7 +20,7 @@ namespace Languages.Exceptions
     public class LanguageNotLoadedException : Exception
     {
         /// <summary>
-        ///     Default constructor.
+        ///     Initializes a new instance of the <see cref="LanguageNotLoadedException"/> class.
         /// </summary>
         // ReSharper disable once UnusedMember.Global
         public LanguageNotLoadedException()
@@ -18,7 +28,7 @@ namespace Languages.Exceptions
         }
 
         /// <summary>
-        ///     Constructor with message.
+        ///     Initializes a new instance of the <see cref="LanguageNotLoadedException"/> class.
         /// </summary>
         /// <param name="message">The <see cref="Exception" /> message to be shown.</param>
         // ReSharper disable once UnusedMember.Global
@@ -28,7 +38,7 @@ namespace Languages.Exceptions
         }
 
         /// <summary>
-        ///     Constructor with message and inner <see cref="Exception" /> message.
+        ///     Initializes a new instance of the <see cref="LanguageNotLoadedException"/> class.
         /// </summary>
         /// <param name="message">The <see cref="Exception" /> message to be shown.</param>
         /// <param name="inner">The inner The <see cref="Exception" /> to be shown.</param>

@@ -1,11 +1,22 @@
-﻿using Languages.Implementation;
-using System;
-using System.Collections.Generic;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="IImportExport.cs" company="Haemmer Electronics">
+//   Copyright (c) 2020 All rights reserved.
+// </copyright>
+// <summary>
+//   An interface to load <see cref="Language" />s from file names.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace Languages.Interfaces
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
+
+    using Languages.Implementation;
+
     /// <summary>
-    ///     An <see cref="ImportExport" /> class to load <see cref="Language" />s from file names.
+    ///     An interface to load <see cref="Language" />s from file names.
     /// </summary>
     public interface IImportExport
     {
@@ -35,6 +46,7 @@ namespace Languages.Interfaces
         ///     Shows the <see cref="Exception" />s that occured while loading the <see cref="Language" />s.
         /// </summary>
         /// <returns>The <see cref="List{T}" /> of <see cref="Exception" />s.</returns>
+        [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
         List<Exception> GetExceptions();
     }
 }

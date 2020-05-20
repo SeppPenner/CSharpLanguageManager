@@ -1,7 +1,16 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="WrongFileExtensionException.cs" company="Haemmer Electronics">
+//   Copyright (c) 2020 All rights reserved.
+// </copyright>
+// <summary>
+//   An <see cref="Exception" /> that is thrown whenever the file extension is wrong.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace Languages.Exceptions
 {
+    using System;
+
     /// <summary>
     ///     An <see cref="Exception" /> that is thrown whenever the file extension is wrong.
     /// </summary>
@@ -9,7 +18,7 @@ namespace Languages.Exceptions
     public class WrongFileExtensionException : Exception
     {
         /// <summary>
-        ///     Default constructor.
+        ///     Initializes a new instance of the <see cref="WrongFileExtensionException"/> class.
         /// </summary>
         // ReSharper disable once UnusedMember.Global
         public WrongFileExtensionException()
@@ -17,7 +26,7 @@ namespace Languages.Exceptions
         }
 
         /// <summary>
-        ///     Constructor with message.
+        ///     Initializes a new instance of the <see cref="WrongFileExtensionException"/> class.
         /// </summary>
         /// <param name="message">The <see cref="Exception" /> message to be shown.</param>
         // ReSharper disable once UnusedMember.Global
@@ -27,7 +36,7 @@ namespace Languages.Exceptions
         }
 
         /// <summary>
-        ///     Constructor with message and inner <see cref="Exception" /> message.
+        ///     Initializes a new instance of the <see cref="WrongFileExtensionException"/> class.
         /// </summary>
         /// <param name="message">The <see cref="Exception" /> message to be shown.</param>
         /// <param name="inner">The inner The <see cref="Exception" /> to be shown.</param>

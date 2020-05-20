@@ -1,14 +1,31 @@
-﻿using Languages.Implementation;
-using System;
-using System.Collections.Generic;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="ILanguageManager.cs" company="Haemmer Electronics">
+//   Copyright (c) 2020 All rights reserved.
+// </copyright>
+// <summary>
+//   The <see cref="ILanguageManager" /> interface to manage the <see cref="Language" />s.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace Languages.Interfaces
 {
+    using System;
+    using System.Collections.Generic;
+
+    using Languages.Implementation;
+
     /// <summary>
-    ///     The <see cref="LanguageManager" /> class to manage the <see cref="Language" />s.
+    ///     The <see cref="ILanguageManager" /> interface to manage the <see cref="Language" />s.
     /// </summary>
     public interface ILanguageManager
     {
+        /// <summary>
+        ///     The <see cref="EventHandler" /> that is called whenever the <see cref="Language" /> changes.
+        /// </summary>
+        // ReSharper disable once EventNeverSubscribedTo.Global
+        // ReSharper disable once UnusedMemberInSuper.Global
+        event EventHandler OnLanguageChanged;
+
         /// <summary>
         ///     Sets the current <see cref="Language" /> by the identifier.
         /// </summary>
@@ -44,12 +61,6 @@ namespace Languages.Interfaces
         /// <returns>All the loaded <see cref="ILanguage" />s.</returns>
         // ReSharper disable once UnusedMember.Global
         List<ILanguage> GetLanguages();
-
-        /// <summary>
-        ///     The <see cref="EventHandler" /> that is called whenever the <see cref="Language" /> changes.
-        /// </summary>
-        // ReSharper disable once EventNeverSubscribedTo.Global
-        event EventHandler OnLanguageChanged;
 
         /// <summary>
         ///     Reloads all language files.
