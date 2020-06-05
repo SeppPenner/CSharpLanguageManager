@@ -1,0 +1,45 @@
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="LanguageChangedEventArgs.cs" company="Haemmer Electronics">
+//   Copyright (c) 2020 All rights reserved.
+// </copyright>
+// <summary>
+//   The <see cref="LanguageChangedEventArgs" /> class.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace Languages.Events
+{
+    using System;
+    using System.Diagnostics.CodeAnalysis;
+
+    /// <summary>
+    ///     The <see cref="LanguageChangedEventArgs" /> class.
+    /// </summary>
+    public class LanguageChangedEventArgs : EventArgs
+    {
+        /// <summary>
+        /// The event information.
+        /// </summary>
+        private readonly string eventInformation;
+
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="LanguageChangedEventArgs"/> class.
+        /// </summary>
+        /// <param name="text">The text to be set to the params.</param>
+        [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
+        public LanguageChangedEventArgs(string text)
+        {
+            this.eventInformation = text;
+        }
+
+        /// <summary>
+        ///     Gets the <see cref="LanguageChangedEventArgs" /> info.
+        /// </summary>
+        /// <returns>The event info of the <see cref="LanguageChangedEventArgs" />.</returns>
+        // ReSharper disable once UnusedMember.Global
+        public string GetInfo()
+        {
+            return this.eventInformation;
+        }
+    }
+}

@@ -1,9 +1,7 @@
 ## How to update the package
 
 1. Add your changes.
-2. Update Ghostdoc documentation.
-3. Update versions with Git tag.
-4. Run `build.bat` to build the project and copy the files to the `Nuget` folder.
-5. Adjust the `package.nuspec`.
-6. Copy the `REAMDE.md` and `HowToUse.md` files to the `Nuget` folder.
-7. Run `pack.bat` to build the Nuget package.
+2. Update the release notes in the *.csproj file.
+3. Update version using a Git tag.
+4. Build the project with Visual Studio.
+5. Upload nuget package.
