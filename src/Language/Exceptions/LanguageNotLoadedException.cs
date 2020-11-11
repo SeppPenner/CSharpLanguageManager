@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="LanguageNotLoadedException.cs" company="Haemmer Electronics">
+// <copyright file="LanguageNotLoadedException.cs" company="Hämmer Electronics">
 //   Copyright (c) 2020 All rights reserved.
 // </copyright>
 // <summary>

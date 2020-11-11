@@ -1,6 +1,7 @@
 Change history
 --------------
 
+* **Version 1.0.7.0 (2020-11-11)** : Updated nuget packages, added .Net 5.0.
 * **Version 1.0.6.0 (2020-06-05)** : Updated nuget packages, adjusted build to Visual Studio, moved changelog to extra file.
 * **Version 1.0.5.0 (2019-11-08)** : Updated nuget packages.
 * **Version 1.0.4.1 (2019-10-28)** : Updated nuget packages, added GitVersionTask.
