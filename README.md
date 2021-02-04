@@ -34,6 +34,12 @@ The assembly was written and tested in .Net 5.0.
 ## Basic usage:
 Check out the how to use file [here](https://github.com/SeppPenner/CSharpLanguageManager/blob/master/HowToUse.md).
 
+## Install
+
+```bash
+dotnet add package HaemmerElectronics.SeppPenner.Language
+```
+
 Change history
 --------------
 
