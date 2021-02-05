@@ -1,4 +1,4 @@
-## Basic usage:
+## Basic usage
 If you just have one language loaded, you don't need to set the current language as
 the language manager uses the only language as default.
 ```csharp
@@ -20,7 +20,7 @@ public void Test()
 }
 ```
 
-## Subscription to OnLanguageChanged Version 1.0.0.4 and above:
+## Subscription to OnLanguageChanged Version 1.0.0.4 and above
 You can "subscribe" to the EventHandler OnLanguageChanged to update your GUI whenever the language is changed.
 This can be done like the following: (For more information see [the example project](https://github.com/SeppPenner/CSharpLanguageManager/blob/master/Language/TestLanguage/Main.cs))
 ```csharp
@@ -69,7 +69,7 @@ where the basic change is that the _lm.SetCurrentLanguage() handling was simplif
 _lm.SetCurrentLanguageFromName(comboBoxLanguage.SelectedItem.ToString());
 ```
 
-## Subscription to OnLanguageChanged Version 1.0.0.0 to 1.0.0.3:
+## Subscription to OnLanguageChanged Version 1.0.0.0 to 1.0.0.3
 You can "subscribe" to the EventHandler OnLanguageChanged to update your GUI whenever the language is changed.
 This can be done like the following: (For more information see [the example project](https://github.com/SeppPenner/CSharpLanguageManager/blob/master/Language/TestLanguage/Main.cs))
 
@@ -128,7 +128,7 @@ namespace TestLanguage
 }
 ```
 
-## How do the language files need to look like:
+## How do the language files need to look like
 The file's naming is not important but should be something like "de-DE.xml".
 All language files need to be included into the "languages" folder in your application folder.
 ```xml
