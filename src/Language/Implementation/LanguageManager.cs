@@ -22,7 +22,6 @@ namespace Languages.Implementation
     ///     The <see cref="LanguageManager" /> class to manage the <see cref="Language" />s.
     /// </summary>
     /// <seealso cref = "ILanguageManager" />.
-    // ReSharper disable once UnusedMember.Global
     public class LanguageManager : ILanguageManager
     {
         /// <summary>
@@ -33,12 +32,12 @@ namespace Languages.Implementation
         /// <summary>
         /// The current language.
         /// </summary>
-        private Language currentLanguage;
+        private Language currentLanguage = new();
 
         /// <summary>
         /// The languages.
         /// </summary>
-        private List<Language> languages;
+        private List<Language> languages = new();
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="LanguageManager"/> class.
@@ -53,7 +52,7 @@ namespace Languages.Implementation
         ///     The <see cref="EventHandler" /> that is called whenever the <see cref="Language" /> changes.
         /// </summary>
         /// <seealso cref = "ILanguageManager" />.
-        public event EventHandler OnLanguageChanged;
+        public event EventHandler? OnLanguageChanged;
 
         /// <inheritdoc cref = "ILanguageManager" />.
         /// <summary>
@@ -94,7 +93,7 @@ namespace Languages.Implementation
         /// <param name="key">The key for the <see cref="Word" /> that is searched.</param>
         /// <returns>The corresponding <see cref="Word" />.</returns>
         /// <seealso cref = "ILanguageManager" />.
-        public string GetWord(string key)
+        public string? GetWord(string key)
         {
             return this.currentLanguage.GetWord(key);
         }
@@ -182,7 +181,8 @@ namespace Languages.Implementation
 
             if (this.importExport.GetExceptions().Count > 0)
             {
-                throw new LanguageInitializationException(this.importExport.GetExceptions().ToString());
+                var message = this.importExport.GetExceptions().ToString();
+                throw new LanguageInitializationException(message ?? string.Empty);
             }
         }
 

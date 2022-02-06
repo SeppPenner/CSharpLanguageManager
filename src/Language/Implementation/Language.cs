@@ -28,7 +28,7 @@ namespace Languages.Implementation
         ///     Gets or sets the name of the <see cref="Language" />.
         /// </summary>
         /// <seealso cref = "ILanguage" />.
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <inheritdoc cref = "ILanguage" />.
         /// <summary>
@@ -36,14 +36,14 @@ namespace Languages.Implementation
         ///     https://msdn.microsoft.com/de-de/library/ee825488(v=cs.20).aspx.
         /// </summary>
         /// <seealso cref = "ILanguage" />.
-        public string Identifier { get; set; }
+        public string Identifier { get; set; } = string.Empty;
 
         /// <inheritdoc cref = "ILanguage" />.
         /// <summary>
         ///     Gets or sets the <see cref="List{T}" /> of <see cref="Word" />s in the loaded <see cref="Language" />.
         /// </summary>
         /// <seealso cref = "ILanguage" />.
-        public List<Word> Words { get; set; }
+        public List<Word> Words { get; set; } = new();
 
         /// <inheritdoc cref = "ILanguage" />.
         /// <summary>
@@ -52,9 +52,9 @@ namespace Languages.Implementation
         /// <param name="key">The key that is defined for the <see cref="Word" />.</param>
         /// <returns>The <see cref="Word" /> defined by the key.</returns>
         /// <seealso cref = "ILanguage" />.
-        public string GetWord(string key)
+        public string? GetWord(string key)
         {
-            return this.Words.Find(x => x.Key.Equals(key)).Value;
+            return this.Words.Find(x => x.Key.Equals(key))?.Value;
         }
 
         /// <inheritdoc cref = "ILanguage" />.

@@ -29,8 +29,7 @@ namespace Languages.Implementation
         /// <summary>
         ///     Gets the exceptions.
         /// </summary>
-        // ReSharper disable once MemberCanBePrivate.Global
-        public List<Exception> Exceptions { get; private set; }
+        public List<Exception> Exceptions { get; private set; } = new();
 
         /// <inheritdoc cref = "IImportExport" />.
         /// <summary>
@@ -39,7 +38,7 @@ namespace Languages.Implementation
         /// <param name="filename">The <see cref="Language" /> file name that should be loaded.</param>
         /// <returns>The corresponding <see cref="Language" /> class.</returns>
         /// <seealso cref = "IImportExport" />.
-        public Language Load(string filename)
+        public Language? Load(string filename)
         {
             var xDocument = XDocument.Load(filename);
             return CreateObjectsFromString<Language>(xDocument);
@@ -57,8 +56,8 @@ namespace Languages.Implementation
             var languages = new List<Language>();
             var location = Assembly.GetExecutingAssembly().Location;
             CheckLocationIsNull(location);
-            // ReSharper disable once AssignNullToNotNullAttribute
-            var languageFolder = Path.Combine(Directory.GetParent(location).FullName, "languages");
+            var directoryFolder = Directory.GetParent(location)?.FullName ?? string.Empty;
+            var languageFolder = Path.Combine(directoryFolder, "languages");
 
             foreach (var file in Directory.EnumerateFiles(languageFolder))
             {
@@ -103,10 +102,9 @@ namespace Languages.Implementation
         /// Checks whether the given location is <c>null</c>.
         /// </summary>
         /// <param name="location">The location.</param>
-        // ReSharper disable once ParameterOnlyUsedForPreconditionCheck.Local
         private static void CheckLocationIsNull(string location)
         {
-            if (location == null)
+            if (location is null)
             {
                 throw new ArgumentNullException(nameof(location));
             }
@@ -118,10 +116,10 @@ namespace Languages.Implementation
         /// <typeparam name="T">The type.</typeparam>
         /// <param name="xDocument">The X document.</param>
         /// <returns>The objects of type T.</returns>
-        private static T CreateObjectsFromString<T>(XDocument xDocument)
+        private static T? CreateObjectsFromString<T>(XDocument xDocument)
         {
             var xmlSerializer = new XmlSerializer(typeof(T));
-            return (T)xmlSerializer.Deserialize(new StringReader(xDocument.ToString()));
+            return (T?)xmlSerializer.Deserialize(new StringReader(xDocument.ToString()));
         }
 
         /// <summary>
@@ -134,9 +132,17 @@ namespace Languages.Implementation
             try
             {
                 var extension = Path.GetExtension(file);
-                if (extension != null && extension.Equals(".xml"))
+
+                if (extension is not null && extension.Equals(".xml"))
                 {
-                    languages.Add(this.Load(file));
+                    var loadedLanguage = this.Load(file);
+
+                    if (loadedLanguage is null)
+                    {
+                        return;
+                    }
+
+                    languages.Add(loadedLanguage);
                     return;
                 }
 
