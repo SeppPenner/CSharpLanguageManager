@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="Word.cs" company="Hämmer Electronics">
 //   Copyright (c) 2020 All rights reserved.
 // </copyright>
@@ -7,26 +7,21 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Languages.Implementation
-{
-    using System;
+namespace Languages.Implementation;
 
-    using Languages.Interfaces;
+/// <summary>
+///     The <see cref="Word" /> class.
+/// </summary>
+[Serializable]
+public class Word : IWord
+{
+    /// <summary>
+    ///     Gets or sets the key of the <see cref="Word" />.
+    /// </summary>
+    public string Key { get; set; } = string.Empty;
 
     /// <summary>
-    ///     The <see cref="Word" /> class.
+    ///     Gets or sets value of the <see cref="Word" />.
     /// </summary>
-    [Serializable]
-    public class Word : IWord
-    {
-        /// <summary>
-        ///     Gets or sets the key of the <see cref="Word" />.
-        /// </summary>
-        public string Key { get; set; } = string.Empty;
-
-        /// <summary>
-        ///     Gets or sets value of the <see cref="Word" />.
-        /// </summary>
-        public string Value { get; set; } = string.Empty;
-    }
+    public string Value { get; set; } = string.Empty;
 }

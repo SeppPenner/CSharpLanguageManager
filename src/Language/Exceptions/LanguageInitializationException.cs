@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="LanguageInitializationException.cs" company="Hämmer Electronics">
 //   Copyright (c) 2020 All rights reserved.
 // </copyright>
@@ -7,42 +7,37 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Languages.Exceptions
-{
-    using System;
+namespace Languages.Exceptions;
 
-    using Languages.Implementation;
+/// <summary>
+///     An <see cref="Exception" /> that is thrown whenever the <see cref="Language" /> is not initialized correctly.
+/// </summary>
+[Serializable]
+public class LanguageInitializationException : Exception
+{
+    /// <summary>
+    ///     Initializes a new instance of the <see cref="LanguageInitializationException"/> class.
+    /// </summary>
+    public LanguageInitializationException()
+    {
+    }
 
     /// <summary>
-    ///     An <see cref="Exception" /> that is thrown whenever the <see cref="Language" /> is not initialized correctly.
+    ///     Initializes a new instance of the <see cref="LanguageInitializationException"/> class.
     /// </summary>
-    [Serializable]
-    public class LanguageInitializationException : Exception
+    /// <param name="message">The <see cref="Exception" /> message to be shown.</param>
+    public LanguageInitializationException(string message)
+        : base(message)
     {
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="LanguageInitializationException"/> class.
-        /// </summary>
-        public LanguageInitializationException()
-        {
-        }
+    }
 
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="LanguageInitializationException"/> class.
-        /// </summary>
-        /// <param name="message">The <see cref="Exception" /> message to be shown.</param>
-        public LanguageInitializationException(string message)
-            : base(message)
-        {
-        }
-
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="LanguageInitializationException"/> class.
-        /// </summary>
-        /// <param name="message">The <see cref="Exception" /> message to be shown.</param>
-        /// <param name="inner">The inner The <see cref="Exception" /> to be shown.</param>
-        public LanguageInitializationException(string message, Exception inner)
-            : base(message, inner)
-        {
-        }
+    /// <summary>
+    ///     Initializes a new instance of the <see cref="LanguageInitializationException"/> class.
+    /// </summary>
+    /// <param name="message">The <see cref="Exception" /> message to be shown.</param>
+    /// <param name="inner">The inner The <see cref="Exception" /> to be shown.</param>
+    public LanguageInitializationException(string message, Exception inner)
+        : base(message, inner)
+    {
     }
 }

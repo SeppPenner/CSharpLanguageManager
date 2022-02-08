@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="LanguageChangedEventArgs.cs" company="Hämmer Electronics">
 //   Copyright (c) 2020 All rights reserved.
 // </copyright>
@@ -7,36 +7,33 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Languages.Events
+namespace Languages.Events;
+
+/// <summary>
+///     The <see cref="LanguageChangedEventArgs" /> class.
+/// </summary>
+public class LanguageChangedEventArgs : EventArgs
 {
-    using System;
+    /// <summary>
+    /// The event information.
+    /// </summary>
+    private readonly string eventInformation;
 
     /// <summary>
-    ///     The <see cref="LanguageChangedEventArgs" /> class.
+    ///     Initializes a new instance of the <see cref="LanguageChangedEventArgs"/> class.
     /// </summary>
-    public class LanguageChangedEventArgs : EventArgs
+    /// <param name="text">The text to be set to the params.</param>
+    public LanguageChangedEventArgs(string text)
     {
-        /// <summary>
-        /// The event information.
-        /// </summary>
-        private readonly string eventInformation;
+        this.eventInformation = text;
+    }
 
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="LanguageChangedEventArgs"/> class.
-        /// </summary>
-        /// <param name="text">The text to be set to the params.</param>
-        public LanguageChangedEventArgs(string text)
-        {
-            this.eventInformation = text;
-        }
-
-        /// <summary>
-        ///     Gets the <see cref="LanguageChangedEventArgs" /> info.
-        /// </summary>
-        /// <returns>The event info of the <see cref="LanguageChangedEventArgs" />.</returns>
-        public string GetInfo()
-        {
-            return this.eventInformation;
-        }
+    /// <summary>
+    ///     Gets the <see cref="LanguageChangedEventArgs" /> info.
+    /// </summary>
+    /// <returns>The event info of the <see cref="LanguageChangedEventArgs" />.</returns>
+    public string GetInfo()
+    {
+        return this.eventInformation;
     }
 }
