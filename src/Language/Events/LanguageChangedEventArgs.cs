@@ -10,7 +10,6 @@
 namespace Languages.Events
 {
     using System;
-    using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
     ///     The <see cref="LanguageChangedEventArgs" /> class.
@@ -26,7 +25,6 @@ namespace Languages.Events
         ///     Initializes a new instance of the <see cref="LanguageChangedEventArgs"/> class.
         /// </summary>
         /// <param name="text">The text to be set to the params.</param>
-        [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
         public LanguageChangedEventArgs(string text)
         {
             this.eventInformation = text;
