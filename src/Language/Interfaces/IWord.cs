@@ -23,8 +23,6 @@ namespace Languages.Interfaces
         ///     Gets or sets the key of the <see cref="Word" />.
         /// </summary>
         /// <seealso cref = "IWord" />.
-        // ReSharper disable once UnusedMember.Global
-        // ReSharper disable once UnusedMemberInSuper.Global
         string Key { get; set; }
 
         /// <inheritdoc cref = "IWord" />.
@@ -32,8 +30,6 @@ namespace Languages.Interfaces
         ///     Gets or sets value of the <see cref="Word" />.
         /// </summary>
         /// <seealso cref = "IWord" />.
-        // ReSharper disable UnusedMemberInSuper.Global
-        // ReSharper disable once UnusedMember.Global
         string Value { get; set; }
     }
 }

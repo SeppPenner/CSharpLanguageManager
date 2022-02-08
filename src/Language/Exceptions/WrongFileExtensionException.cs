@@ -20,7 +20,6 @@ namespace Languages.Exceptions
         /// <summary>
         ///     Initializes a new instance of the <see cref="WrongFileExtensionException"/> class.
         /// </summary>
-        // ReSharper disable once UnusedMember.Global
         public WrongFileExtensionException()
         {
         }
@@ -29,7 +28,6 @@ namespace Languages.Exceptions
         ///     Initializes a new instance of the <see cref="WrongFileExtensionException"/> class.
         /// </summary>
         /// <param name="message">The <see cref="Exception" /> message to be shown.</param>
-        // ReSharper disable once UnusedMember.Global
         public WrongFileExtensionException(string message)
             : base(message)
         {

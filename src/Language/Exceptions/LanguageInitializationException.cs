@@ -22,7 +22,6 @@ namespace Languages.Exceptions
         /// <summary>
         ///     Initializes a new instance of the <see cref="LanguageInitializationException"/> class.
         /// </summary>
-        // ReSharper disable once UnusedMember.Global
         public LanguageInitializationException()
         {
         }
@@ -41,7 +40,6 @@ namespace Languages.Exceptions
         /// </summary>
         /// <param name="message">The <see cref="Exception" /> message to be shown.</param>
         /// <param name="inner">The inner The <see cref="Exception" /> to be shown.</param>
-        // ReSharper disable once UnusedMember.Global
         public LanguageInitializationException(string message, Exception inner)
             : base(message, inner)
         {

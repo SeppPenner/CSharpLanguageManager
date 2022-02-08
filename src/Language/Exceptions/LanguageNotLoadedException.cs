@@ -22,7 +22,6 @@ namespace Languages.Exceptions
         /// <summary>
         ///     Initializes a new instance of the <see cref="LanguageNotLoadedException"/> class.
         /// </summary>
-        // ReSharper disable once UnusedMember.Global
         public LanguageNotLoadedException()
         {
         }
@@ -31,7 +30,6 @@ namespace Languages.Exceptions
         ///     Initializes a new instance of the <see cref="LanguageNotLoadedException"/> class.
         /// </summary>
         /// <param name="message">The <see cref="Exception" /> message to be shown.</param>
-        // ReSharper disable once UnusedMember.Global
         public LanguageNotLoadedException(string message)
             : base(message)
         {
