@@ -14,14 +14,10 @@ CSharpLanguageManager is an assembly/ library to build multilingual programms in
 [![Gitter](https://badges.gitter.im/CSharpLanguageManager/community.svg)](https://gitter.im/CSharpLanguageManager/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Available for
-* NetStandard 2.0
-* NetStandard 2.1
 * Net 6.0
 * Net 7.0
 
 ## Net Core and Net Framework latest and LTS versions
-* https://dotnet.microsoft.com/download/dotnet-framework
-* https://dotnet.microsoft.com/download/dotnet-core
 * https://dotnet.microsoft.com/download/dotnet
 
 ## Basic usage
