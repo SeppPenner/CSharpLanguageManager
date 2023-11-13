@@ -16,7 +16,7 @@
         <RepositoryUrl>https://github.com/SeppPenner/CSharpLanguageManager</RepositoryUrl>
         <PackageIcon>Icon.png</PackageIcon>
         <RepositoryType>Github</RepositoryType>
-        <PackageReleaseNotes>Version 1.1.2.0 (2022-11-10): Updated NuGet packages, added support for Net7.0, removed support for Net5.0.</PackageReleaseNotes>
+        <PackageReleaseNotes>Version 1.1.3.0 (2023-11-13): Updated NuGet packages, removed support for netstandard, removed support for netcoreapp3.1.</PackageReleaseNotes>
         <PackageLicenseFile>License.txt</PackageLicenseFile>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -26,7 +26,6 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <NoWarn>NU1803</NoWarn>
-        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     </PropertyGroup>
 
     <ItemGroup>
