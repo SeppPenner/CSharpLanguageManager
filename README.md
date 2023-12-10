@@ -12,6 +12,9 @@ CSharpLanguageManager is an assembly/ library to build multilingual programms in
 [![NuGet Downloads](https://img.shields.io/nuget/dt/HaemmerElectronics.SeppPenner.Language.svg)](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/CSharpLanguageManager/badge.svg)](https://snyk.io/test/github/SeppPenner/CSharpLanguageManager)
 [![Gitter](https://badges.gitter.im/CSharpLanguageManager/community.svg)](https://gitter.im/CSharpLanguageManager/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Blogger](https://img.shields.io/badge/Follow_me_on-blogger-orange)](https://franzhuber23.blogspot.de/)
+[![Patreon](https://img.shields.io/badge/Patreon-F96854?logo=patreon&logoColor=white)](https://patreon.com/SeppPennerOpenSourceDevelopment)
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?logo=paypal&logoColor=white)](https://paypal.me/th070795)
 
 ## Available for
 * Net 6.0
