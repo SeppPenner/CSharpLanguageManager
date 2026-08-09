@@ -156,7 +156,7 @@ public class LanguageManager : ILanguageManager
     [DoesNotReturn]
     private static void ThrowLanguageNotProperlyLoadedException(string language)
     {
-        throw new LanguageNotLoadedException("The language " + language + " is not loaded properly", new Exception("The language " + language + " is not loaded properly"));
+        throw new LanguageNotLoadedException("The language " + language + " is not loaded properly");
     }
 
     /// <summary>

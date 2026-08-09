@@ -136,7 +136,7 @@ public class ImportExport : IImportExport
                 return;
             }
 
-            this.SaveException(new WrongFileExtensionException("File " + file + " is no XML file", new Exception("File " + file + " is no XML file")));
+            this.SaveException(new WrongFileExtensionException("File " + file + " is no XML file"));
         }
         catch (Exception ex)
         {

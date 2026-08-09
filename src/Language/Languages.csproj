@@ -16,7 +16,7 @@
         <RepositoryUrl>https://github.com/SeppPenner/CSharpLanguageManager</RepositoryUrl>
         <PackageIcon>Icon.png</PackageIcon>
         <RepositoryType>Github</RepositoryType>
-        <PackageReleaseNotes>Version 1.1.7.0 (2026-08-09): Added support for Net10.0, enabled TreatWarningsAsErrors, moved the example language files out of the lib folder in the nuget package, unknown languages now throw a LanguageNotLoadedException instead of an InvalidOperationException, the LanguageInitializationException now contains the messages of the language files that failed to load.</PackageReleaseNotes>
+        <PackageReleaseNotes>Version 1.1.7.0 (2026-08-09): Added support for Net10.0, enabled TreatWarningsAsErrors, moved the example language files out of the lib folder in the nuget package, unknown languages now throw a LanguageNotLoadedException instead of an InvalidOperationException, the LanguageInitializationException now contains the messages of the language files that failed to load, removed the inner exceptions that only repeated the message of the outer exception.</PackageReleaseNotes>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
