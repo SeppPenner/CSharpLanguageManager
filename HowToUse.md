@@ -22,7 +22,7 @@ public void Test()
 
 ## Subscription to OnLanguageChanged Version 1.0.0.4 and above
 You can "subscribe" to the EventHandler OnLanguageChanged to update your GUI whenever the language is changed.
-This can be done like the following: (For more information see [the example project](https://github.com/SeppPenner/CSharpLanguageManager/blob/master/Language/TestLanguage/Main.cs))
+This can be done like the following:
 ```csharp
 namespace TestLanguage
 {
@@ -71,7 +71,7 @@ _lm.SetCurrentLanguageFromName(comboBoxLanguage.SelectedItem.ToString());
 
 ## Subscription to OnLanguageChanged Version 1.0.0.0 to 1.0.0.3
 You can "subscribe" to the EventHandler OnLanguageChanged to update your GUI whenever the language is changed.
-This can be done like the following: (For more information see [the example project](https://github.com/SeppPenner/CSharpLanguageManager/blob/master/Language/TestLanguage/Main.cs))
+This can be done like the following:
 
 ```csharp
 using System;
@@ -146,5 +146,4 @@ All language files need to be included into the "languages" folder in your appli
 </Language>
 ```
 
-An example project can be found [here](https://github.com/SeppPenner/CSharpLanguageManager/tree/master/Language/TestLanguage).
 The project can be found on [nuget](https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language).
