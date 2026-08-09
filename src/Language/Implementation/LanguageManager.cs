@@ -98,13 +98,14 @@ public class LanguageManager : ILanguageManager
     /// <seealso cref = "ILanguageManager" />.
     public void SetCurrentLanguage(string identifier)
     {
-        this.currentLanguage = this.languages.First(x => x.Identifier.Equals(identifier));
+        var language = this.languages.FirstOrDefault(x => x.Identifier.Equals(identifier));
 
-        if (this.currentLanguage == null)
+        if (language is null)
         {
             ThrowLanguageNotProperlyLoadedException(identifier);
         }
 
+        this.currentLanguage = language;
         this.LanguageHasChanged();
     }
 
@@ -116,13 +117,14 @@ public class LanguageManager : ILanguageManager
     /// <seealso cref = "ILanguageManager" />.
     public void SetCurrentLanguageFromName(string name)
     {
-        this.currentLanguage = this.languages.First(x => x.Name.Equals(name));
+        var language = this.languages.FirstOrDefault(x => x.Name.Equals(name));
 
-        if (this.currentLanguage == null)
+        if (language is null)
         {
             ThrowLanguageNotProperlyLoadedException(name);
         }
 
+        this.currentLanguage = language;
         this.LanguageHasChanged();
     }
 
@@ -150,6 +152,8 @@ public class LanguageManager : ILanguageManager
     /// Throws a <see cref="LanguageNotLoadedException"/>.
     /// </summary>
     /// <param name="language">The language.</param>
+    /// <exception cref="LanguageNotLoadedException">Thrown always, the method never returns.</exception>
+    [DoesNotReturn]
     private static void ThrowLanguageNotProperlyLoadedException(string language)
     {
         throw new LanguageNotLoadedException("The language " + language + " is not loaded properly", new Exception("The language " + language + " is not loaded properly"));
@@ -170,11 +174,12 @@ public class LanguageManager : ILanguageManager
     {
         this.languages = this.importExport.LoadDefaults();
         this.CheckSingleLanguage();
+        var exceptions = this.importExport.GetExceptions();
 
-        if (this.importExport.GetExceptions().Count > 0)
+        if (exceptions.Count > 0)
         {
-            var message = this.importExport.GetExceptions().ToString();
-            throw new LanguageInitializationException(message ?? string.Empty);
+            var message = string.Join(Environment.NewLine, exceptions.Select(exception => exception.Message));
+            throw new LanguageInitializationException(message, new AggregateException(exceptions));
         }
     }
 

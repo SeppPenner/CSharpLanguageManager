@@ -98,13 +98,15 @@ Follow the surrounding code, it is consistent throughout:
 
 Do not silently "clean up" these, they are behaviour that consumers may depend on:
 
-- `LanguageManager.SetCurrentLanguage` and `SetCurrentLanguageFromName` use `First(...)`, so an
-  unknown language throws `InvalidOperationException` before the following null check can run. The
-  null check and `ThrowLanguageNotProperlyLoadedException` are effectively dead code. Changing this
-  to `FirstOrDefault` changes the thrown exception type and belongs in the changelog.
-- `ImportExport.LoadDefaults` swallows per file errors into `Exceptions`, and `LanguageManager`
-  turns a non empty list into a `LanguageInitializationException` whose message is the result of
-  `List<Exception>.ToString()`, so it is the type name, not the messages.
+- `SetCurrentLanguage` and `SetCurrentLanguageFromName` throw `LanguageNotLoadedException` for an
+  unknown language and leave the current language untouched. Up to version 1.1.6.0 they threw the
+  `InvalidOperationException` of `First(...)` instead.
+- `ImportExport.LoadDefaults` does not throw per file, it collects the failures in `Exceptions`.
+  `LanguageManager` turns a non empty list into one `LanguageInitializationException` whose message
+  joins the single messages and whose inner exception is an `AggregateException`.
+- `ThrowLanguageNotProperlyLoadedException` is annotated with `[DoesNotReturn]`. Without that
+  attribute the nullable analysis flags the assignment after the null check, and warnings are
+  errors here.
 - The Windows Forms samples in `HowToUse.md` are illustration only, there is no such project in
   this repository. Do not turn them into links to one.
 
