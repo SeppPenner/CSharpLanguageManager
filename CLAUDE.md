@@ -117,7 +117,7 @@ The steps are the ones in `Updating.md`:
 1. Make the change.
 2. Update `PackageReleaseNotes` in `src/Language/Languages.csproj` to the new version line.
 3. Add an entry at the top of `Changelog.md` in the existing format:
-   `* **Version 1.1.8.0 (2026-08-09)** : Short description.`
+   `* **Version 1.1.9.0 (2026-08-09)** : Short description.`
 4. Tag the commit with the plain version number, no `v` prefix (`1.1.6`, `1.1.5`, ...).
    GitVersion.MsBuild derives assembly and package version from the tag, never edit a version
    property or an assembly version by hand.
