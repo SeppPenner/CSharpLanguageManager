@@ -50,8 +50,8 @@ consumer, so treat those as deliberate breaking changes, not as cleanup.
 dotnet build src/Language.sln
 ```
 
-- The project multi targets `net8.0;net9.0`. Nothing here is Windows only, but the helper batch
-  files are.
+- The project multi targets `net8.0;net9.0;net10.0`. Nothing here is Windows only, but the helper
+  batch files are.
 - `GeneratePackageOnBuild` is on, so **every** build packs: a `.nupkg` and a `.snupkg` appear in
   `src/Language/bin/<configuration>`, in Debug too. The version comes from GitVersion, for example
   `1.1.7-3` for the third commit after tag `1.1.6`.
@@ -102,8 +102,8 @@ Do not silently "clean up" these, they are behaviour that consumers may depend o
 - `ImportExport.LoadDefaults` swallows per file errors into `Exceptions`, and `LanguageManager`
   turns a non empty list into a `LanguageInitializationException` whose message is the result of
   `List<Exception>.ToString()`, so it is the type name, not the messages.
-- `HowToUse.md` links an example project `Language/TestLanguage` that no longer exists in this
-  repository. The linked code is still valid usage, only the link is dead.
+- The Windows Forms samples in `HowToUse.md` are illustration only, there is no such project in
+  this repository. Do not turn them into links to one.
 
 ## Releasing
 
@@ -112,7 +112,7 @@ The steps are the ones in `Updating.md`:
 1. Make the change.
 2. Update `PackageReleaseNotes` in `src/Language/Languages.csproj` to the new version line.
 3. Add an entry at the top of `Changelog.md` in the existing format:
-   `* **Version 1.1.7.0 (2026-08-09)** : Short description.`
+   `* **Version 1.1.8.0 (2026-08-09)** : Short description.`
 4. Tag the commit with the plain version number, no `v` prefix (`1.1.6`, `1.1.5`, ...).
    GitVersion.MsBuild derives assembly and package version from the tag, never edit a version
    property or an assembly version by hand.

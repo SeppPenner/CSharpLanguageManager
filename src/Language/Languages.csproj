@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+        <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
         <AssemblyName>Languages</AssemblyName>
         <RootNamespace>Languages</RootNamespace>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -16,7 +16,7 @@
         <RepositoryUrl>https://github.com/SeppPenner/CSharpLanguageManager</RepositoryUrl>
         <PackageIcon>Icon.png</PackageIcon>
         <RepositoryType>Github</RepositoryType>
-        <PackageReleaseNotes>Version 1.1.6.0 (2024-11-24): Removed support for Net6.0, added support for Net9.0, updated NuGet packages.</PackageReleaseNotes>
+        <PackageReleaseNotes>Version 1.1.7.0 (2026-08-09): Added support for Net10.0.</PackageReleaseNotes>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
