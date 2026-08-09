@@ -37,7 +37,7 @@ The runtime contract is convention based and part of the public behaviour:
   the extension `.xml` and deserialize into `Language` (`Identifier`, `Name`,
   `Words/Word/Key` plus `Value`).
 - `languages/de-DE.xml` and `languages/en-US.xml` in the repository root are the shipped samples.
-  They are packed into the NuGet package under `lib\languages`.
+  They are packed into the NuGet package under `languages`.
 - Identifiers follow the culture names that `CultureInfo` understands (`de-DE`, `en-US`), because
   `Language.GetCulture()` feeds the identifier into `new CultureInfo(...)`.
 
@@ -55,11 +55,14 @@ dotnet build src/Language.sln
 - `GeneratePackageOnBuild` is on, so **every** build packs: a `.nupkg` and a `.snupkg` appear in
   `src/Language/bin/<configuration>`, in Debug too. The version comes from GitVersion, for example
   `1.1.7-3` for the third commit after tag `1.1.6`.
-- Warnings are **not** errors in this repository, there is no `TreatWarningsAsErrors`. The pack
-  step always prints `NU5103` (twice, for the two language files under `lib\languages`) and
-  `NU5128`. That is expected output of a clean build, do not "fix" it by removing the language
-  files from the package.
-- `NU1803` is the one warning suppressed via `NoWarn` in the csproj.
+- `TreatWarningsAsErrors` is enabled in `src/Directory.Build.props`, so every warning breaks the
+  build, NuGet warnings (`NU****`) from restore and pack included. A clean build reports zero
+  warnings, keep it that way.
+- `NU1803` (HTTP source usage during restore) is the one warning suppressed via `NoWarn` in the
+  csproj. Fix warnings instead of extending that list.
+- The sample language files are packed to `languages` in the package, deliberately not below
+  `lib`, because that folder is reserved for target framework folders. The old `lib\languages`
+  path is what produced `NU5103` and `NU5128`.
 - Restore needs nuget.org. If a private feed is configured globally on the machine and answers
   404 for public packages, restore fails with `NU1301`. Then build with an explicit source:
   `dotnet build src/Language.sln --source https://api.nuget.org/v3/index.json`.

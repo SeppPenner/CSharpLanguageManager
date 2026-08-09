@@ -16,7 +16,7 @@
         <RepositoryUrl>https://github.com/SeppPenner/CSharpLanguageManager</RepositoryUrl>
         <PackageIcon>Icon.png</PackageIcon>
         <RepositoryType>Github</RepositoryType>
-        <PackageReleaseNotes>Version 1.1.7.0 (2026-08-09): Added support for Net10.0.</PackageReleaseNotes>
+        <PackageReleaseNotes>Version 1.1.7.0 (2026-08-09): Added support for Net10.0, enabled TreatWarningsAsErrors, moved the example language files out of the lib folder in the nuget package.</PackageReleaseNotes>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -58,9 +58,11 @@
             <Pack>True</Pack>
             <PackagePath></PackagePath>
         </None>
+        <!-- The example language files are shipped inside the package, but not below lib, as that
+             folder is reserved for target framework folders. -->
         <None Include="..\..\languages\**">
             <Pack>True</Pack>
-            <PackagePath>lib\languages</PackagePath>
+            <PackagePath>languages</PackagePath>
         </None>
     </ItemGroup>
 
