@@ -50,7 +50,7 @@ consumer, so treat those as deliberate breaking changes, not as cleanup.
 dotnet build src/Language.sln
 ```
 
-- The project multi targets `net8.0;net9.0;net10.0`. Nothing here is Windows only, but the helper
+- The project multi targets `net8.0;net10.0`. Nothing here is Windows only, but the helper
   batch files are.
 - `GeneratePackageOnBuild` is on, so **every** build packs: a `.nupkg` and a `.snupkg` appear in
   `src/Language/bin/<configuration>`, in Debug too. The version comes from GitVersion, for example

@@ -18,7 +18,6 @@ CSharpLanguageManager is an assembly/ library to build multilingual programms in
 
 ## Available for
 * Net 8.0
-* Net 9.0
 * Net 10.0
 
 ## Net Core and Net Framework latest and LTS versions

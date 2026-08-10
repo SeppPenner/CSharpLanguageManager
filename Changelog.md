@@ -1,6 +1,7 @@
 Change history
 --------------
 
+* **Version 1.1.9.0 (2026-08-10)** : Removed support for Net9.0 as it is out of support.
 * **Version 1.1.8.0 (2026-08-09)** : Removed the inner exceptions of the LanguageNotLoadedException and the WrongFileExtensionException that only repeated the message of the outer exception.
 * **Version 1.1.7.0 (2026-08-09)** : Added support for Net10.0, enabled TreatWarningsAsErrors, moved the example language files out of the lib folder in the nuget package, unknown languages now throw a LanguageNotLoadedException instead of an InvalidOperationException, the LanguageInitializationException now contains the messages of the language files that failed to load.
 * **Version 1.1.6.0 (2024-11-24)** : Removed support for Net6.0, added support for Net9.0, updated NuGet packages.
