@@ -112,20 +112,69 @@ Do not silently "clean up" these, they are behaviour that consumers may depend o
 
 ## Releasing
 
-The steps are the ones in `Updating.md`:
+**Every new version is released completely.** Changelog, README, nuget.org, GitHub Packages and a
+GitHub release belong to every version, none of these steps is optional and none of them waits for
+a separate request.
 
 1. Make the change.
-2. Update `PackageReleaseNotes` in `src/Language/Languages.csproj` to the new version line.
-3. Add an entry at the top of `Changelog.md` in the existing format:
-   `* **Version 1.1.9.0 (2026-08-09)** : Short description.`
-4. Tag the commit with the plain version number, no `v` prefix (`1.1.6`, `1.1.5`, ...).
-   GitVersion.MsBuild derives assembly and package version from the tag, never edit a version
-   property or an assembly version by hand.
-5. `BuildAndPushPackage.bat` cleans `bin` and `obj`, builds Release and pushes `.nupkg` and
-   `.snupkg` to nuget.org and to github. It needs `NUGET_API_KEY` and `GITHUB_API_KEY` in the
-   environment. Never run it unless explicitly asked to publish.
+2. Add an entry at the top of `Changelog.md` in the existing format:
+   `* **Version 1.1.8.0 (2026-08-09)** : Short description.`
+3. Copy that text into `PackageReleaseNotes` in `src/Language/Languages.csproj`, in the single line
+   format `Version 1.1.8.0 (2026-08-09): Short description.`. It is the only place in the build
+   files that names a version, and it is duplicated from the changelog by hand.
+4. Update `README.md` for every version. The `## Available for` list has to match the
+   `TargetFrameworks` of the project, and nothing there may describe a state the package has left
+   behind. `HowToUse.md` is packed into the package as well, check it the same way.
+5. Commit that.
+6. Tag the commit with the plain version number, no `v` prefix (`1.1.8`, `1.1.7`, ...). The existing
+   tags are lightweight tags, create new ones the same way. GitVersion.MsBuild derives assembly and
+   package version from the tag, never edit a version property or an assembly version by hand.
+7. Push the commits and the tag.
+8. Only then build the package, and build it while the tag is the newest commit. GitVersion takes
+   the version from the tag plus the distance to it, so a build before the tag or after another
+   commit produces a prerelease version like `1.1.9-3+Branch.master.Sha...`, and that version would
+   end up on nuget.org. `git describe --tags` has to answer with the plain tag.
+9. Publish to nuget.org with `BuildAndPushPackage.bat`, started from the repository root, its first
+   line is `cd .\src`. It deletes every `bin` and `obj` below `src`, builds `-c Release` and pushes
+   the `.nupkg` and the `.snupkg` to nuget.org with `%NUGET_API_KEY%` and to the NuGet source named
+   `github` with `%GITHUB_API_KEY%`. **Do not run it as it is now:** `ECHO` is on at the four
+   `dotnet nuget push` lines and they carry no leading `@`, so cmd prints each of them after the
+   variable expansion, with both API keys in plain text, into the console and every log or
+   transcript of the run. Prefix those four lines with `@` first, as in the sibling repositories.
+   The script ends with `PAUSE`, so it wants a console. Call it with its full path: the Claude Code
+   shell sets `NoDefaultCurrentDirectoryInExePath=1`, so cmd does not find a bare
+   `BuildAndPushPackage.bat` in the current directory. Because it always rebuilds, it is only
+   correct as long as no commit sits on top of the tag. If one does, push the package that was
+   built from the tagged state instead, by its file name and not with the wildcard, because
+   `GeneratePackageOnBuild` leaves a `.nupkg` of every intermediate build in `bin`:
+   `dotnet nuget push HaemmerElectronics.SeppPenner.Language.1.1.8.nupkg -s "nuget.org" --skip-duplicate -k %NUGET_API_KEY%`
+   in `src/Language/bin/Release`. That command takes the matching `.snupkg` with it. A push to
+   nuget.org cannot be taken back, the version is burned even after unlisting. nuget.org needs a few
+   minutes to validate a new version before it is listed.
+10. Publish the same `.nupkg` to GitHub Packages,
+    `https://nuget.pkg.github.com/SeppPenner/index.json`. The script only reaches it if a NuGet
+    source named `github` is registered on the machine, `dotnet nuget list source` shows that. On
+    2026-11-24 only nuget.org was registered here, so the two `github` lines of the script fail and
+    the push has to be done by hand in `src/Language/bin/Release`:
+    `dotnet nuget push HaemmerElectronics.SeppPenner.Language.1.1.8.nupkg -s https://nuget.pkg.github.com/SeppPenner/index.json --skip-duplicate --api-key <token>`.
+    The API key is a GitHub token with the scope `write:packages`, for example from
+    `gh auth token`. If `gh auth status` lists no `write:packages`, the user has to run
+    `gh auth refresh -h github.com -s write:packages,read:packages`, it needs a browser login.
+    GitHub Packages takes no symbol packages, push the `.nupkg` only.
+11. Create the GitHub release:
+    `gh release create 1.1.8 -R SeppPenner/CSharpLanguageManager --verify-tag --latest --title "Version 1.1.8.0 (2026-08-09)" --notes-file <file>`.
+    The notes are the changelog sentence plus the line
+    `NuGet: https://www.nuget.org/packages/HaemmerElectronics.SeppPenner.Language/1.1.8`. Write
+    credits as `` `@name` `` in backticks, a bare `@name` notifies that person again.
 
-Also update the "Available for" list in `README.md` when the target frameworks change.
+The version in `Changelog.md` has four parts (`1.1.8.0`), the tag has three (`1.1.8`). The old tag
+`1.0.4.1` is the one exception.
+
+nuget.org holds 1.0.0.5 to 1.0.0.12 and 1.0.1 to 1.1.8, `1.0.4.1` included, the tags start with
+1.0.2. On 2026-11-24 no tag had a GitHub release yet, and GitHub Packages held 1.0.7 to 1.0.11,
+1.1.0 and 1.1.4 to 1.1.8, the older history there is incomplete. The entry for 1.1.9.0 at the top
+of `Changelog.md` and in `PackageReleaseNotes` was written on 2026-08-10, but that version was never
+tagged nor published.
 
 There is no CI configuration in this repository, no `.github` folder and no publish pipeline. The
 AppVeyor badge in `README.md` points to a build that is configured outside of the repository.
