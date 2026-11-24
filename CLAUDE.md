@@ -137,10 +137,9 @@ a separate request.
 9. Publish to nuget.org with `BuildAndPushPackage.bat`, started from the repository root, its first
    line is `cd .\src`. It deletes every `bin` and `obj` below `src`, builds `-c Release` and pushes
    the `.nupkg` and the `.snupkg` to nuget.org with `%NUGET_API_KEY%` and to the NuGet source named
-   `github` with `%GITHUB_API_KEY%`. **Do not run it as it is now:** `ECHO` is on at the four
-   `dotnet nuget push` lines and they carry no leading `@`, so cmd prints each of them after the
-   variable expansion, with both API keys in plain text, into the console and every log or
-   transcript of the run. Prefix those four lines with `@` first, as in the sibling repositories.
+   `github` with `%GITHUB_API_KEY%`. The four push lines carry a leading `@`, because `ECHO` is on
+   there and cmd would otherwise write each of them to the console after the variable expansion,
+   both API keys included. Do not remove those prefixes.
    The script ends with `PAUSE`, so it wants a console. Call it with its full path: the Claude Code
    shell sets `NoDefaultCurrentDirectoryInExePath=1`, so cmd does not find a bare
    `BuildAndPushPackage.bat` in the current directory. Because it always rebuilds, it is only
