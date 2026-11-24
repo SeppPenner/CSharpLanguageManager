@@ -178,6 +178,11 @@ tagged nor published.
 There is no CI configuration in this repository, no `.github` folder and no publish pipeline. The
 AppVeyor badge in `README.md` points to a build that is configured outside of the repository.
 
+## Git
+
+- Include the full GitHub pull request or issue URL in the body of each related commit on a `Refs:`
+  line. Use the [GitHub issue skill](.claude/skills/github-issue/SKILL.md) for issue work and closeout.
+
 ## Writing style
 
 - Commit messages are written **in English only**: short, precise subject line, explanatory body
