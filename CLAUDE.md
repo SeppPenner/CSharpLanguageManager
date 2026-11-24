@@ -169,11 +169,9 @@ a separate request.
 The version in `Changelog.md` has four parts (`1.1.8.0`), the tag has three (`1.1.8`). The old tag
 `1.0.4.1` is the one exception.
 
-nuget.org holds 1.0.0.5 to 1.0.0.12 and 1.0.1 to 1.1.8, `1.0.4.1` included, the tags start with
-1.0.2. On 2026-11-24 no tag had a GitHub release yet, and GitHub Packages held 1.0.7 to 1.0.11,
-1.1.0 and 1.1.4 to 1.1.8, the older history there is incomplete. The entry for 1.1.9.0 at the top
-of `Changelog.md` and in `PackageReleaseNotes` was written on 2026-08-10, but that version was never
-tagged nor published.
+nuget.org and GitHub Packages hold 1.0.0.5 to 1.0.0.12 and 1.0.1 to 1.1.9, `1.0.4.1` included.
+The tags start with 1.0.2, so the versions before it have no GitHub release, every tag has one.
+The missing versions on GitHub Packages and the releases were added on 2026-11-24.
 
 There is no CI configuration in this repository, no `.github` folder and no publish pipeline. The
 AppVeyor badge in `README.md` points to a build that is configured outside of the repository.
